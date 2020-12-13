@@ -30,7 +30,7 @@
   backdrop-filter: blur(40px);
 }    
 
-@media only screen and (max-device-width: 720px){
+@media only screen and (max-device-width: 768px){
   .hero-bg{
     background-image: linear-gradient(to top, rgba(195,55,100,0.7), rgba(26, 26, 46, 0.863) 100%) , url("../public/assets/hero.svg");
     background-position:top center;
