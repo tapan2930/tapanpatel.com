@@ -40,10 +40,10 @@ const BigCard = (props: IProps) => {
         {(props.code || props.app) && (
           <div className="flex">
             <div className="mr-4">
-              <IconButton text={"web"} buttonType={"button-frosted"} />
+              <IconButton text={"web"} link={"button-frosted"} />
             </div>
             <div>
-              <IconButton text={"code"} buttonType={"button-frosted"} />
+              <IconButton text={"code"} link={"button-frosted"} />
             </div>
           </div>
         )}
