@@ -30,7 +30,7 @@ const Post = ({postData}:any)=>{
     return (
         <main className="bg-primary text-white h-full pb-12">
             <Navbar />
-            <div className="container px-6 sm:px-10 md:px-10 lg:px-72">
+            <div className="container px-1 sm:px-10 md:px-10 lg:px-72">
                 <div>
                     <div>
                         <h1 className="text-gray-300 text-5xl pt-12 pb-2 mb-6">
@@ -51,7 +51,7 @@ const Post = ({postData}:any)=>{
                 <div>
                     <img width="100%" src={postData.cover.url} alt={postData.title}/>
                 </div>
-                <div className="px-6 py-6 mb-12">
+                <div className="px-2 sm:px-3 md:px-6 py-6 mb-12">
                 <ContentMD content={postData.content} />
                 </div>
                 </div>
