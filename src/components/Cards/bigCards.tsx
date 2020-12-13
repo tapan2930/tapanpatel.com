@@ -7,7 +7,6 @@ interface IProps {
   description: string;
   code: string ;
   app: string | undefined;
-  projectStatus: string;
   tags: any;
   cover: any;
   
@@ -23,13 +22,6 @@ const BigCard = (props: IProps) => {
         <div>
           <h1 className="text-xl font-semibold">
             {props.title}
-            <span
-              className={`text-xs ml-2 font-light ${
-                props.projectStatus ? "text-red-200" : "text-green-200"
-              }`}
-            >
-              ( {props.projectStatus ? "Ongoing" : "Completed"} )
-            </span>
           </h1>
         </div>
         <div className="my-2">
