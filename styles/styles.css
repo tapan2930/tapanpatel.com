@@ -1,0 +1,38 @@
+.button-frosted{
+    background: rgba(196, 196, 196, 0.07);
+  }
+
+  .primary-button{
+    border: 1px solid #E94560;
+    border-radius: 6px;
+    display: inline-block;
+  }
+  .primary-button:active{
+    background: #E94560;
+    border: 1px solid #FFFFFF;
+  }
+
+  .big-button{
+    background: rgba(196, 196, 196, 0.07);
+    backdrop-filter: blur(40px);
+    border-radius: 10px;
+    display: inline-block;
+    }
+  
+    .hero-bg{
+      background: #1A1A2E;
+      background-image: linear-gradient(to left, rgba(195,55,100,0.7), rgba(26,26,46,0) 100%) , url("../public/assets/hero.svg");
+      background-repeat: no-repeat;
+      background-position:right center;
+    }
+
+.frost{
+  backdrop-filter: blur(40px);
+}    
+
+@media only screen and (max-device-width: 720px){
+  .hero-bg{
+    background-image: linear-gradient(to top, rgba(195,55,100,0.7), rgba(26, 26, 46, 0.863) 100%) , url("../public/assets/hero.svg");
+    background-position:top center;
+  }
+}
