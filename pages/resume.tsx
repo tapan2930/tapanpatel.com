@@ -15,7 +15,7 @@ function ResumeDisplay() {
             <>
       <div className="displayPDF">      
         <Document
-          file='https://pateltapan.com/Resume.pdf'
+          file='https://tapanpatel-com.vercel.app/assets/Resume.pdf'
         >
           <Page pageNumber={1} />
         </Document>
