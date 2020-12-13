@@ -2,32 +2,31 @@ import Navbar from "@components/Navbar/Navbar"
 import ContentMD from "@components/Markdown/markDown"
 import { GraphQLClient  } from 'graphql-request'
 import {POSTLIST, POST} from '@api/quries.ts'
-import { BsDot } from "react-icons/bs"
+// import { BsDot } from "react-icons/bs"
 
 
 interface postList {
     slug: string
 }
 
-interface InAuthor {
-    name:string;
-    picture:any
-}
+// interface InAuthor {
+//     name:string;
+//     picture:any
+// }
 
-interface InPostData {
-    date: string;
-    title: string;
-    excerpt: string;
-    tags: Array<string> | string;
-    content: String;
-    cover:any
-    author: InAuthor
-}
+// interface InPostData {
+//     date: string;
+//     title: string;
+//     excerpt: string;
+//     tags: Array<string> | string;
+//     content: String;
+//     cover:any
+//     author: InAuthor
+// }
 
 
 
-const Post = ({postData}:InPostData)=>{
-    const markdown = postData.content
+const Post = ({postData}:any)=>{
     return (
         <main className="bg-primary text-white h-full pb-12">
             <Navbar />
@@ -55,7 +54,6 @@ const Post = ({postData}:InPostData)=>{
                 <div className="px-6 py-6 mb-12">
                 <ContentMD content={postData.content} />
                 </div>
-             
                 </div>
           
             </div>

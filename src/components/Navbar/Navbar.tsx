@@ -57,7 +57,7 @@ const Navbar = ()=> {
                   <div id={`${idx}`} className="inline-block mx-1 ">
                     <IconButton
                       text={socialMedia.service}
-                      buttonType={"button-frosted"}
+                      link={socialMedia.link}
                     />
                   </div>
                 );
