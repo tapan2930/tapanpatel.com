@@ -36,7 +36,7 @@ const Post: NextPage = ({pinnedPost, unpinnedPost}:any)=>{
                         <Link href={`/blogs/${post.slug}`} >
                         <a href={`/blogs/${post.slug}`} >
                            <div id={`${idx}`}>
-                               <BigCard description={post.excerpt} title={post.title} cover={post.cover} tags={post.tags} projectStatus={""} app={""} code={""}  />
+                               <BigCard description={post.excerpt} title={post.title} cover={post.cover} tags={post.tags} app={""} code={""}  />
                            </div>
                            </a>
                  </Link>
