@@ -21,10 +21,10 @@ interface postdata{
 
 const Post = ({pinnedPost, allPost}:any)=>{
     return (
-        <main className="hero-bg h-screen overflow-y-scroll text-text font-body pb-16">
+        <main className="bg-primary h-screen overflow-y-scroll text-text font-body pb-16">
         <Navbar/>
 
-        <div className="container mx-auto px-6 sm:px-10 md:px-10 lg:px-72">
+        <div className="container mx-auto px-3 sm:px-10 md:px-10 lg:px-72">
           {/* <div className="text-center pt-16"> <h1 className="text-4xl">Blogs</h1></div> */}
           <div className="my-16">
             <div className="mb-16">

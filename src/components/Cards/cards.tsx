@@ -18,7 +18,7 @@ const Card = (props:IProps)=>{
             <div className="flex justify-center bg-gray-50 rounded-t-sm md:rounded-l-sm md:rounded-t-none h-48 sm:h-auto sm:w-48 lg:w-72">
                 <img className="rounded-t-sm md:rounded-l-sm md:rounded-t-none  w-full p-2 object-cover" src={props.cover.url} alt={props.title}/>
             </div>
-            <div className="py-4 px-6  border-gray-300 w-full">
+            <div className="py-3 px-3 md:px-6  border-gray-300 w-full">
             <div>
                 <h1 className="flex flex-wrap text-xl font-semibold text-gray-100">
                 {props.title}

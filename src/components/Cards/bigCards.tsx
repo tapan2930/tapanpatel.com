@@ -19,7 +19,7 @@ const BigCard = (props: IProps) => {
       <div className=" bg-gray-50 rounded-t-lg ">
         <img className="rounded-t-lg h-64 w-full object-cover" src={props.cover.url} alt={props.title} />
       </div>
-      <div className="py-4 px-6  border-gray-300 w-full">
+      <div className="py-3 px-3 md:px-6  border-gray-300 w-full">
         <div>
           <h1 className="text-lg font-semibold capitalize text-gray-100">
             {props.title}

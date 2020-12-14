@@ -8,10 +8,10 @@ import {ALLPROJECTS} from '@api/quries.ts'
 const projectPage: NextPage = ({data}:any) => {
  
     return (
-      <main className=" hero-bg text-text font-body pb-16 h-screen overflow-y-scroll">
+      <main className="bg-primarytiary text-text font-body pb-16 h-screen overflow-y-scroll">
           <Navbar/>
 
-          <div className="container mx-auto px-6 sm:px-10 md:px-10 lg:px-72">
+          <div className="container mx-auto px-3 sm:px-10 md:px-10 lg:px-72">
             <div className="pt-6  md:pt-16 "> <h1 className="text-3xl text-gray-100">Projects</h1><p>Here are all my work :</p></div>
             <div className=" my-6">
               {
