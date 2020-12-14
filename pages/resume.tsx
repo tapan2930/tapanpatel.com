@@ -1,4 +1,3 @@
-import Button from "@components/Button/Button";
 import Navbar from "@components/Navbar/Navbar"
 import Link from "next/link";
 import { Document, Page } from "react-pdf";
