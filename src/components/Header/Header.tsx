@@ -6,12 +6,12 @@ import UserProfile from '@components/UserProfile/userProfile'
 let Header = (): JSX.Element => {
   return (
     <header>
-      <div className="grid grid-cols-1 md:grid-cols-12 hero-bg h-screen overflow-y-auto">
-        <div className="col-span-5">
+      <div className="grid grid-cols-1 md:grid-cols-12  h-screen overflow-y-auto">
+        <div className="col-span-5 bg-primary">
           <UserProfile />
         </div>
         {/* Right Side */}
-        <div className=" p-2 md:p-0 col-span-7   flex items-center justify-center">
+        <div className=" p-2 md:p-0 col-span-7 hero-bg  flex items-center justify-center">
           <div className="grid grid-cols-1 m-2 md:m-0 md:grid-cols-2 w-full md:w-auto gap-4">
           <div className=""> <BigButton text={"Projects"} link={"/projects"}/></div>
           <div className=""> <BigButton text={"Blogs"} link={"/blogs"}/></div>

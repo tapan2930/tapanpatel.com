@@ -18,7 +18,7 @@ const projectPage: NextPage = ({data}:any) => {
                 data.projects.map((project:any,idx:number)=>{
                   return (
                     <div id={`${idx}`} className="mb-6">
-                      <Card {...project} />
+                      <Card {...project} coverType={""} />
                     </div>
                   )
                 })

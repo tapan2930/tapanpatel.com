@@ -18,10 +18,10 @@ function ResumeDisplay() {
            </Link>
              </div>
             <>
-      <div className="mt-6 overflow-scroll md:overflow-hidden flex justify-center ">      
+      <div className="mt-6  overflow-scroll lg:overflow-hidden relative left-0 lg:flex lg:justify-center ">      
         <Document
           file='https://tapanpatel-com.vercel.app/assets/Resume.pdf'
-          renderMode="svg"
+          renderMode="canvas"
         >
           <Page pageNumber={1} />
         </Document>
