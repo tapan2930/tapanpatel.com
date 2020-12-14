@@ -11,14 +11,14 @@ function ResumeDisplay() {
     return (
         <div className="bg-primary text-text font-body pb-16">
             <Navbar />
-            <div className="container mx-auto px-2 sm:px-10 md:px-10 lg:px-72 flex justify-center  flex-col">
-           <div className="mt-3">
+            <div className="container mx-auto px-2 sm:px-10 md:px-10 lg:px-72   flex-col">
+           <div className="mt-3 text-center">
            <Link href={"assets/Resume.pdf"} >
              <a>Download</a>
            </Link>
              </div>
             <>
-      <div className="mt-6 overflow-scroll md:overflow-hidden ">      
+      <div className="mt-6 overflow-scroll md:overflow-hidden flex justify-center ">      
         <Document
           file='https://tapanpatel-com.vercel.app/assets/Resume.pdf'
           renderMode="svg"
