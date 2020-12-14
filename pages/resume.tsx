@@ -1,3 +1,4 @@
+import Button from "@components/Button/Button";
 import Navbar from "@components/Navbar/Navbar"
 import { Document, Page } from "react-pdf";
 import { pdfjs } from "react-pdf";
@@ -10,10 +11,10 @@ function ResumeDisplay() {
     return (
         <div className="bg-primary text-text font-body pb-16">
             <Navbar />
-            <div className="container mx-auto px-6 sm:px-10 md:px-10 lg:px-72 flex justify-center">
-           
+            <div className="container mx-auto px-2 sm:px-10 md:px-10 lg:px-72 flex justify-center mb-3">
+            <Button link={"assets/Resume.pdf"} text={"Download"} />
             <>
-      <div className="mt-6 overflow-scroll ">      
+      <div className="mt-6 overflow-scroll md:overflow-hidden ">      
         <Document
           file='https://tapanpatel-com.vercel.app/assets/Resume.pdf'
           renderMode="svg"
