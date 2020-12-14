@@ -10,12 +10,13 @@ function ResumeDisplay() {
     return (
         <div className="bg-primary text-text font-body pb-16">
             <Navbar />
-            <div className="container mx-auto px-6 sm:px-10 md:px-10 lg:px-72">
+            <div className="container mx-auto px-6 sm:px-10 md:px-10 lg:px-72 flex justify-center">
            
             <>
-      <div className="mt-6">      
+      <div className="mt-6 overflow-scroll ">      
         <Document
           file='https://tapanpatel-com.vercel.app/assets/Resume.pdf'
+          renderMode="svg"
         >
           <Page pageNumber={1} />
         </Document>
