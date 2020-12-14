@@ -8,12 +8,12 @@ import {ALLPROJECTS} from '@api/quries.ts'
 const projectPage: NextPage = ({data}:any) => {
  
     return (
-      <main className="bg-primary text-white font-body pb-16">
+      <main className=" hero-bg text-text font-body pb-16 h-screen overflow-y-scroll">
           <Navbar/>
 
-          <div className="container mx-auto px-6 sm:px-10 md:px-10 lg:px-48">
-            <div className="text-center pt-6  md:pt-16"> <h1 className="text-4xl">Projects</h1></div>
-            <div className=" my-6 md:my-16">
+          <div className="container mx-auto px-6 sm:px-10 md:px-10 lg:px-72">
+            <div className="pt-6  md:pt-16 "> <h1 className="text-3xl text-gray-100">Projects</h1><p>Here are all my work :</p></div>
+            <div className=" my-6">
               {
                 data.projects.map((project:any,idx:number)=>{
                   return (
@@ -38,4 +38,4 @@ const projectPage: NextPage = ({data}:any) => {
       }
     }
   }
-export default projectPage;
+export default projectPage

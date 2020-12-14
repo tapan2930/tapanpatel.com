@@ -9,7 +9,7 @@ import userProfile from "userProfile";
 let Header = (): JSX.Element => {
   return (
     <header>
-      <div className="grid grid-cols-1 md:grid-cols-12 md:h-screen overflow-hidden">
+      <div className="grid grid-cols-1 md:grid-cols-12 hero-bg h-screen overflow-y-auto">
         <div className="col-span-5 border-dashed border-secondary">
          
           <div className="flex items-center">
@@ -31,11 +31,11 @@ let Header = (): JSX.Element => {
               })}
             </div>
           </div>
-          <div className=" flex flex-col items-center mt-6 md:mt-24">
-            <div className="rounded-full overflow-hidden inline-block mx-auto mb-10 md:mb-20">
+          <div className=" flex flex-col items-center mt-6 md:mt-16">
+            <div className="rounded-full overflow-hidden inline-block mx-auto mb-10 md:mb-16">
               <img src={userProfile.profile} alt="profile" width="250px" />
             </div>
-            <div className="button-frosted border border-secondary px-12 py-4 text-center md:w-96 ">
+            <div className=" border bg-tertiary frost border-secondary px-12 py-4 text-center md:w-96 ">
               <h1 className="text-4xl tracking-wide pb-2">
                 {userProfile.name}
               </h1>
@@ -56,7 +56,7 @@ let Header = (): JSX.Element => {
           </div>
         </div>
         {/* Right Side */}
-        <div className=" p-2 md:p-0 col-span-7 hero-bg  flex items-center justify-center">
+        <div className=" p-2 md:p-0 col-span-7   flex items-center justify-center">
           <div className="grid grid-cols-1 m-2 md:m-0 md:grid-cols-2 w-full md:w-auto gap-4">
           <div className=""> <BigButton text={"Projects"} link={"/projects"}/></div>
           <div className=""> <BigButton text={"Blogs"} link={"/blogs"}/></div>

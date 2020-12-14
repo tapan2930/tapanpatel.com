@@ -12,7 +12,7 @@ const Navbar = ()=> {
   const [navToggle,setNavToggle] = useState(false)
   const menuOnClickHandler = (toggle:boolean) => setNavToggle(toggle)
     return(
-        <header className={`bg-tertiary frost sticky top-0 w-full text-white z-50`}>
+        <header className={`bg-tertiary frost sticky top-0 w-full text-gray-100 z-50`}>
              <div className="md:flex md:flex-row items-center md:justify-between">
                 <div className="flex items-center justify-between md:justify-start">
                 <div className="inline-block">
@@ -25,7 +25,7 @@ const Navbar = ()=> {
             <div className="hidden md:block">
               {userProfile.socialMediaProfile.map((socialMedia, idx) => {
                 return (
-                  <div id={`${idx}`} className="inline-block mx-1 text-lg">
+                  <div id={`${idx}`} className="inline-block mx-1 text-xl">
                     <IconButton
                       text={socialMedia.service}
                       link={socialMedia.link}
@@ -34,7 +34,7 @@ const Navbar = ()=> {
                 );
               })}
             </div>
-            <div className="text-xl mr-4 md:hidden" onClick={()=>menuOnClickHandler(!navToggle)}>
+            <div className="text-2xl mr-4 md:hidden" onClick={()=>menuOnClickHandler(!navToggle)}>
                     {navToggle? <AiOutlineClose /> :  <BiMenu />}
                   </div>
                 </div> 

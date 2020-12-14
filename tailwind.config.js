@@ -9,6 +9,7 @@ module.exports = {
         'tertiary': 'rgba(196, 196, 196, 0.07)',
         'secondary':'#E94560',
         'hash': 'rgba(233, 69, 96, 0.7)',
+        'text': 'rgba(255, 255, 255, 0.678)'
       },
       extend: {
         fontFamily:{

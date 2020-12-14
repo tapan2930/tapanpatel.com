@@ -8,12 +8,12 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 function ResumeDisplay() {
 
     return (
-        <div className="bg-primary text-white font-body pb-16">
+        <div className="bg-primary text-text font-body pb-16">
             <Navbar />
-            <div className="resume">
+            <div className="container mx-auto px-6 sm:px-10 md:px-10 lg:px-72">
            
             <>
-      <div className="displayPDF">      
+      <div className="mt-6">      
         <Document
           file='https://tapanpatel-com.vercel.app/assets/Resume.pdf'
         >

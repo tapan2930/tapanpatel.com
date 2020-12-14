@@ -12,15 +12,15 @@ interface IProps {
 }
 
 const Card = (props:IProps)=>{
-    console.log("passed data",props)
+    let description = props.description.slice(0,150)
     return (
-        <div className=" transition duration-200 transform hover:-translate-y-2 hover:shadow-md ease-in-out flex flex-col md:flex-row bg-tertiary rounded-lg">
-            <div className="flex justify-center bg-gray-50 rounded-t-lg md:rounded-l-lg">
-                <img className="rounded-t-lg md:rounded-l-lg md:rounded-t-none w-48" src={props.cover.url} alt={props.title}/>
+        <div className=" transition duration-200 transform hover:-translate-y-2 hover:shadow-md ease-in-out flex flex-col md:flex-row bg-tertiary frost rounded-md">
+            <div className="flex justify-center bg-gray-50 rounded-t-sm md:rounded-l-sm md:rounded-t-none h-48 sm:h-auto sm:w-48 lg:w-72">
+                <img className="rounded-t-sm md:rounded-l-sm md:rounded-t-none  w-full p-2 object-cover" src={props.cover.url} alt={props.title}/>
             </div>
             <div className="py-4 px-6  border-gray-300 w-full">
             <div>
-                <h1 className="flex flex-wrap text-xl font-semibold">
+                <h1 className="flex flex-wrap text-xl font-semibold text-gray-100">
                 {props.title}
                 </h1>
             </div>
@@ -35,7 +35,7 @@ const Card = (props:IProps)=>{
                     })
                 }
             </div>
-            <div className="my-2">
+            <div className="my-2 h-24 sm:max-h-20 lg:h-12 overflow-y-hidden">
                 <p className="font-thin">
                     {props.description}
                 </p>
@@ -43,8 +43,8 @@ const Card = (props:IProps)=>{
 
             {
                     (props.code || props.app) && (  <div className="flex">
-                    <div className="mr-4"><IconButton text={"web"} link={"button-frosted"}/></div>
-                    <div><IconButton text={"code"} link={"button-frosted"}/></div>
+                    <div className="mr-4 text-xl"><IconButton text={"web"} link={props.app!}/></div>
+                    <div><IconButton text={"code"} link={props.code}/></div>
                 </div> )
                 }
             </div>       

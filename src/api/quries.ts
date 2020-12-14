@@ -61,9 +61,9 @@ query pinnedPost{
 }
 `
 
-const UNPINNEDPOST = gql`
-query unpinnedPost{
-  posts (where: {pin: false},  stage: PUBLISHED){
+const ALLPOST = gql`
+query allPost{
+  posts (stage: PUBLISHED){
     title
     slug
     date
@@ -86,6 +86,6 @@ query postList{
 `
 
 
-export {ALLPROJECTS, POST, POSTLIST, PINNEDPOST, UNPINNEDPOST}
+export {ALLPROJECTS, POST, POSTLIST, PINNEDPOST, ALLPOST}
 
 
