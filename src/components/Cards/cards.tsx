@@ -12,7 +12,7 @@ interface IProps {
 }
 
 const Card = (props:IProps)=>{
-    let description = props.description.slice(0,150)
+    // let description = props.description.slice(0,150)
     return (
         <div className=" transition duration-200 transform hover:-translate-y-2 hover:shadow-md ease-in-out flex flex-col md:flex-row bg-tertiary frost rounded-md">
             <div className="flex justify-center bg-gray-50 rounded-t-sm md:rounded-l-sm md:rounded-t-none h-48 sm:h-auto sm:w-48 lg:w-72">
