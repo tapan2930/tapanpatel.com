@@ -31,7 +31,7 @@
 }    
 
 body::-webkit-scrollbar {
-  width: 1em;
+  width: 0.5em;
 }
  
 body::-webkit-scrollbar-track {
@@ -39,8 +39,8 @@ body::-webkit-scrollbar-track {
 }
  
 body::-webkit-scrollbar-thumb {
-  background-color: rgb(224, 28, 28);
-  outline: 1px solid slategrey;
+  background-color: #1A1A2E;
+  outline: none
 }
 
 @media only screen and (max-device-width: 768px){
