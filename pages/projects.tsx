@@ -8,7 +8,7 @@ import {ALLPROJECTS} from '@api/quries.ts'
 const projectPage: NextPage = ({data}:any) => {
  
     return (
-      <main className="bg-primarytiary text-text font-body pb-16 h-screen overflow-y-scroll">
+      <main className="bg-primary  text-text font-body pb-16 h-full">
           <Navbar/>
 
           <div className="container mx-auto px-3 sm:px-10 md:px-10 lg:px-72">

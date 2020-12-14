@@ -21,7 +21,7 @@ interface postdata{
 
 const Post = ({pinnedPost, allPost}:any)=>{
     return (
-        <main className="bg-primary h-screen overflow-y-scroll text-text font-body pb-16">
+        <main className="bg-primary text-text font-body pb-16">
         <Navbar/>
 
         <div className="container mx-auto px-3 sm:px-10 md:px-10 lg:px-72">
