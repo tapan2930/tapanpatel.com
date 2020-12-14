@@ -1,4 +1,4 @@
-import { NextPage } from 'next';
+
 import Link from 'next/link';
 import Navbar from "@components/Navbar/Navbar"
 import BigCard from "@components/Cards/bigCards"
@@ -19,7 +19,7 @@ interface postdata{
 
 
 
-const Post: NextPage = ({pinnedPost, allPost}:any)=>{
+const Post = ({pinnedPost, allPost}:any)=>{
     return (
         <main className="hero-bg h-screen overflow-y-scroll text-text font-body pb-16">
         <Navbar/>

@@ -8,8 +8,8 @@ export let navbarData = [
         link:"/blogs"
     },
     {
-        name:"About",
-        link:"/about"
+        name:"Resources",
+        link:"/resources"
     },
     {
         name:"Resume",

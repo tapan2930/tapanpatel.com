@@ -23,7 +23,7 @@ const userProfile  = {
         },
         {
             service: "email", 
-            link: "mailto://tapan2930@gmail.com"
+            link: "mailto:tapan2930@gmail.com"
         }
     ],
 }
