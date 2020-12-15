@@ -15,7 +15,7 @@ interface IProps {
 const Card = (props:IProps)=>{
     // let description = props.description.slice(0,150)
     return (
-        <div className=" transition duration-200 transform hover:-translate-y-2 hover:shadow-md ease-in-out flex flex-col md:flex-row bg-tertiary rounded-md">
+        <div className=" transition duration-200 transform hover:-translate-y-2 shadow-md hover:shadow-sm ease-in-out flex flex-col md:flex-row bg-tertiary rounded-md">
             <div className="flex justify-center bg-gray-50 rounded-t-sm md:rounded-l-sm md:rounded-t-none h-48 sm:h-auto sm:w-48 lg:w-72">
                 <img className={`rounded-t-sm md:rounded-l-sm md:rounded-t-none w-1/2  p-2 ${props.coverType}`} src={props.cover.url} alt={props.title}/>
             </div>

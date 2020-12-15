@@ -33,7 +33,7 @@ const Post = ({postData}:any)=>{
             <div className="container px-1 sm:px-10 md:px-10 lg:px-72">
                 <div>
                     <div>
-                        <h1 className="text-gray-300 text-5xl pt-12 pb-2 mb-6">
+                        <h1 className="text-gray-300 text-3xl pt-12 pb-2 mb-6">
                             {postData.title}
                         </h1>
                         {/* <div className="flex text-gray-300 items-center my-6 ">
