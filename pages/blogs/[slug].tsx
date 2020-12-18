@@ -1,6 +1,5 @@
 import Navbar from "@components/Navbar/Navbar"
 import ContentMD from "@components/Markdown/markDown"
-import {useState} from 'react'
 import { GraphQLClient  } from 'graphql-request'
 import {POSTLIST, POST} from '@api/quries.ts'
 import { BsDot } from "react-icons/bs"
