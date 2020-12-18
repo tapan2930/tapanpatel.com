@@ -22,7 +22,7 @@ const ContentMD = ({content}:any)=>{
 
     return (
         <div className={`${styles.blog} ${themeValue} py-6 relative`} >
-            <div className="inline-block absolute left-1/2 -top-7"> <DropDownMenu OnChangeThemeHandler={OnChangeThemeHandler} /></div>
+            <div className="inline-block absolute -ml-5 sm:-ml-6  left-1/2 -top-5 sm:-top-7"> <DropDownMenu OnChangeThemeHandler={OnChangeThemeHandler} /></div>
             <ReactMarkdown>{content}</ReactMarkdown>
         </div>
     )
