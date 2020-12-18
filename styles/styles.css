@@ -2,6 +2,15 @@
     background: rgba(196, 196, 196, 0.07);
   }
 
+.bg-test{
+  background-color: #1a1a2ee3;
+}  
+
+.border-primary-1{
+
+  border-bottom:1px #e945604f dotted;
+}
+
   .primary-button{
     border: 1px solid #E94560;
     border-radius: 6px;
@@ -31,7 +40,7 @@
 }    
 
 body::-webkit-scrollbar {
-  width: 0.5em;
+  width: 0.2em;
 }
  
 body::-webkit-scrollbar-track {

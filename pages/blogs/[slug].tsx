@@ -1,8 +1,10 @@
 import Navbar from "@components/Navbar/Navbar"
 import ContentMD from "@components/Markdown/markDown"
+import {useState} from 'react'
 import { GraphQLClient  } from 'graphql-request'
 import {POSTLIST, POST} from '@api/quries.ts'
-// import { BsDot } from "react-icons/bs"
+import { BsDot } from "react-icons/bs"
+import Link from "next/link"
 
 
 interface postList {
@@ -27,31 +29,36 @@ interface postList {
 
 
 const Post = ({postData}:any)=>{
+
     return (
         <main className="bg-primary text-white h-full pb-12">
             <Navbar />
-            <div className="container px-1 sm:px-10 md:px-10 lg:px-72">
+            <div className="container m-auto px-1 sm:px-10 md:px-10 lg:px-32 xl:px-72">
                 <div>
                     <div>
-                        <h1 className="text-gray-300 text-3xl pt-12 pb-2 mb-6">
-                            {postData.title}
+                        <h1 className="text-gray-300 text-2xl pt-12 text-center  flex justify-center items-center">
+                            {postData.title} 
+                            <div className="inline-block"></div>
+                            
                         </h1>
-                        {/* <div className="flex text-gray-300 items-center my-6 ">
-                            <img width="40" src={postData.author.picture.url} alt=""/>
-                            <h2 className="ml-2">{postData.author.name}</h2>
+                        <div className="tracking-widest text-center text-2xl mb-3">...</div>
+                        <div className="flex text-gray-300  text-xs items-center justify-center mb-2">
+                            {/* <img width="40" src={postData.author.picture.url} alt=""/> */}
+                            <Link href="/"><a><h2 className="ml-2 border-b border-dotted text-secondary border-secondary ">{postData.author.name}</h2></a></Link>
                             <BsDot />
                             <p className="text-gray-300">
                             {postData.date}
                         </p>
-                        </div> */}
+                        </div>
+                        
                         
                     </div>
                 </div>
-                <div className="bg-tertiary "> 
+                <div className=" rounded-sm"> 
                 <div>
-                    <img width="100%" src={postData.cover.url} alt={postData.title}/>
+                    <img className="rounded-sm" width="100%" src={postData.cover.url} alt={postData.title}/>
                 </div>
-                <div className="px-2 sm:px-3 md:px-6 py-6 mb-12">
+                <div className="">
                 <ContentMD content={postData.content} />
                 </div>
                 </div>

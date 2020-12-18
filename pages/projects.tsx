@@ -11,8 +11,8 @@ const projectPage: NextPage = ({data}:any) => {
       <main className="bg-primary  text-text font-body pb-16 h-full">
           <Navbar/>
 
-          <div className="container mx-auto px-3 sm:px-10 md:px-10 lg:px-72">
-            <div className="pt-6  md:pt-16 "> <h1 className="text-3xl text-gray-100">Projects</h1><p>Here are all my work :</p></div>
+          <div className="container mx-auto px-3 sm:px-10 md:px-10 lg:px-32 xl:px-72">
+            <div className="pt-6  md:pt-8 "> <h1 className="text-xl text-gray-100">Projects</h1><p>Here are all my work :</p></div>
             <div className=" my-6">
               {
                 data.projects.map((project:any,idx:number)=>{

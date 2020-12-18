@@ -9,7 +9,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 function ResumeDisplay() {
 
     return (
-        <div className="bg-primary text-text font-body pb-16">
+        <div className="bg-primary text-text font-body pb-16 h-full">
             <Navbar />
             <div className="container mx-auto px-2 sm:px-10 md:px-10 lg:px-72   flex-col">
            <div className="mt-3 text-center">

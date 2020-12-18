@@ -20,13 +20,14 @@ interface postdata{
 
 
 const Post = ({pinnedPost, allPost}:any)=>{
+
     return (
         <main className="bg-primary text-text font-body pb-16">
         <Navbar/>
 
-        <div className="container mx-auto px-3 sm:px-10 md:px-10 lg:px-72">
+        <div className="container mx-auto px-3 sm:px-10 md:px-10 lg:px-32 xl:px-72">
           {/* <div className="text-center pt-16"> <h1 className="text-4xl">Blogs</h1></div> */}
-          <div className="my-16">
+          <div className="my-8">
             <div className="mb-16">
                 <h2 className="text-xl text-gray-100 ">Pinned</h2><p>Must read post :</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
@@ -47,7 +48,7 @@ const Post = ({pinnedPost, allPost}:any)=>{
             </div>
                 
             <div>
-                <h2 className="text-xl " >All Posts </h2>
+                <h2 className="text-xl text-gray-100 " >All Posts </h2>
                 <div className=" grid grid-cols-1 gap-4  mt-6">
                 {
                    allPost.map((post:postdata, idx:Number)=>{

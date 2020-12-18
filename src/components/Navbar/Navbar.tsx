@@ -12,7 +12,7 @@ const Navbar = ()=> {
   const [navToggle,setNavToggle] = useState(false)
   const menuOnClickHandler = (toggle:boolean) => setNavToggle(toggle)
     return(
-        <header className={`bg-tertiary frost sticky top-0 w-full text-gray-100 z-50`}>
+        <header className={`bg-test frost shadow-md sticky top-0 w-full text-gray-300 z-50`}>
              <div className="md:flex md:flex-row items-center md:justify-between">
                 <div className="flex items-center justify-between md:justify-start">
                 <div className="inline-block">
