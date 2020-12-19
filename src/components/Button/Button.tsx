@@ -10,7 +10,7 @@ interface IProps {
 
     return (
       <Link href={`${link}`}>
-        <a  className={`transition duration-200 shadow-sm hover:shadow-md ease-in-out md:bg-tertiary block md:inline-block  md:rounded-md text-center px-3 py-2 text-gray-300 cursor-pointer`}>
+        <a  className={`transition duration-200 shadow-sm hover:shadow-md ease-in-out lg:bg-tertiary block lg:inline-block  lg:rounded-md text-center px-3 py-2 text-gray-300 cursor-pointer`}>
         <span className="align-middle">{text}</span>
         </a>
         </Link>

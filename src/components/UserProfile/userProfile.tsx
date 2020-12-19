@@ -8,8 +8,8 @@ const UserProfile = ()=>{
     return (
         <div>
                       <div className="flex items-center">
-            <div className="inline-block">
-              <img src="/assets/logo.svg" alt="logo" />
+            <div className="inline-block py-3 pl-3">
+              <img width="60" src="/assets/logo.svg" alt="logo" />
             </div>
             <div className=" flex justify-center w-9/12 md:relative -left-10 md:m-auto ">
               {userProfile.socialMediaProfile.map((socialMedia, idx) => {
@@ -27,10 +27,10 @@ const UserProfile = ()=>{
             </div>
           </div>
           <div className=" flex flex-col items-center mt-6 md:mt-16">
-            <div className="rounded-full overflow-hidden inline-block mx-auto mb-10 md:mb-16">
+            <div className="rounded-full overflow-hidden bg-secondary opacity-90 shadow-md border border-secondary inline-block mx-auto mb-10 md:mb-16">
               <img src={userProfile.profile} alt="profile" width="250px" />
             </div>
-            <div className=" border bg-tertiary frost border-secondary px-12 py-4 text-center md:w-96 ">
+            <div className=" bg-tertiary frost shadow-md   px-12 py-4 text-center md:w-96 ">
               <h1 className="text-4xl tracking-wide pb-2">
                 {userProfile.name}
               </h1>

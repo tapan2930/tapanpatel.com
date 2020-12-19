@@ -15,9 +15,9 @@ interface IProps {
 const BigCard = (props: IProps) => {
   let description = props.description.slice(0,125)
   return (
-    <div className="transition duration-200 transform hover:-translate-y-2 shadow-md  hover:shadow-sm ease-in-out flex flex-col bg-tertiary rounded-lg">
-      <div className=" bg-gray-50 rounded-t-lg h-48 sm:h-52 md:h-64 overflow-hidden">
-        <img className="rounded-t-lg object-cover w-full h-full" src={props.cover.url} alt={props.title} />
+    <div className="transition duration-200 transform hover:-translate-y-2 shadow-md  hover:shadow-sm ease-in-out flex flex-col bg-tertiary rounded-sm">
+      <div className=" bg-gray-50 rounded-t-sm h-48 sm:h-52 md:h-64 overflow-hidden p-3">
+        <img className="rounded-t-sm object-cover w-full h-full" src={props.cover.url} alt={props.title} />
       </div>
       <div className="py-3 px-3 md:px-6  border-gray-300 w-full">
         <div>
@@ -35,7 +35,7 @@ const BigCard = (props: IProps) => {
           })}
         </div>
         <div className="my-2 max-h-16 overflow-hidden">
-          <p className="font-thin max-h-28 text-sm overflow-hidden tracking-wide capitalize text-text">{description} ...</p>
+          <p className="max-h-28 text-sm overflow-hidden tracking-wide capitalize text-text">{description} ...</p>
         </div>
 
         {(props.code || props.app) && (

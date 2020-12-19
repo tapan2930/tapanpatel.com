@@ -11,18 +11,19 @@ import {navbarData} from "./navbarData"
 const Navbar = ()=> {
   const [navToggle,setNavToggle] = useState(false)
   const menuOnClickHandler = (toggle:boolean) => setNavToggle(toggle)
+
     return(
         <header className={`bg-test frost shadow-md sticky top-0 w-full text-gray-300 z-50`}>
-             <div className="md:flex md:flex-row items-center md:justify-between">
-                <div className="flex items-center justify-between md:justify-start">
-                <div className="inline-block">
+             <div className="lg:flex lg:flex-row items-center lg:justify-between">
+                <div className="flex items-center justify-between lg:justify-start">
+                <div className="inline-block py-3 px-3">
               <Link href={`/`} >
                 <a>
-                <img src="/assets/logo.svg" alt="logo" />
+                <img width="60" src="/assets/logo.svg" alt="logo" />
                 </a>
                 </Link>
             </div>
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
               {userProfile.socialMediaProfile.map((socialMedia, idx) => {
                 return (
                   <div id={`${idx}`} className="inline-block mx-1 text-xl">
@@ -34,24 +35,24 @@ const Navbar = ()=> {
                 );
               })}
             </div>
-            <div className="text-2xl mr-4 md:hidden" onClick={()=>menuOnClickHandler(!navToggle)}>
+            <div className="text-2xl mr-4 lg:hidden" onClick={()=>menuOnClickHandler(!navToggle)}>
                     {navToggle? <AiOutlineClose /> :  <BiMenu />}
                   </div>
                 </div> 
                
                
                
-                <div className={`${navToggle? "h-screen flex flex-col": "hidden"} md:flex md:flex-row `}>
+                <div className={`${navToggle? "h-screen flex flex-col": "hidden"} lg:flex lg:flex-row `}>
                 {
                 navbarData.map((navData,idx)=>{
                     return (
-                        <div id={`${idx}`} className=" mb-4 md:mr-4 md:mb-0">
+                        <div id={`${idx}`} className=" mb-4 lg:mr-4 lg:mb-0">
                             <Button text={navData.name} link={navData.link} />
                         </div>
                     )
                 })
             }
-             <div className="flex justify-center w-full mx-auto md:hidden">
+             <div className="flex justify-center w-full mx-auto lg:hidden">
               {userProfile.socialMediaProfile.map((socialMedia, idx) => {
                 return (
                   <div id={`${idx}`} className="inline-block mx-1 ">

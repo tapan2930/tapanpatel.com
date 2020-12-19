@@ -25,7 +25,7 @@ const Post = ({pinnedPost, allPost}:any)=>{
         <main className="bg-primary text-text font-body pb-16">
         <Navbar/>
 
-        <div className="container mx-auto px-3 sm:px-10 md:px-10 lg:px-32 xl:px-72">
+        <div className="container mx-auto px-3 sm:px-10 md:px-10 lg:px-20 xl:px-40">
           {/* <div className="text-center pt-16"> <h1 className="text-4xl">Blogs</h1></div> */}
           <div className="my-8">
             <div className="mb-16">
@@ -49,7 +49,7 @@ const Post = ({pinnedPost, allPost}:any)=>{
                 
             <div>
                 <h2 className="text-xl text-gray-100 " >All Posts </h2>
-                <div className=" grid grid-cols-1 gap-4  mt-6">
+                <div className=" grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6  mt-6">
                 {
                    allPost.map((post:postdata, idx:Number)=>{
                      console.log(post)
