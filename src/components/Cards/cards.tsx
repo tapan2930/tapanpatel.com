@@ -39,7 +39,7 @@ const Card = (props:IProps)=>{
           {(props.code || props.app) && (
             <div className="flex">
               <div className="mr-4">
-                <IconButton text={"web"} link={props.app!} />
+               { props.app && (<IconButton text={"web"} link={props.app!} /> )}
               </div>
               <div>
                 <IconButton text={"code"} link={props.code} />
