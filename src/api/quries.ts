@@ -4,7 +4,7 @@ import { gql } from 'graphql-request'
 
 const ALLPROJECTS = gql`
 query{
-    projects(orderBy: id_DESC,  stage: PUBLISHED) {
+    projects(stage: PUBLISHED) {
       title,
       description,
       tags,
@@ -87,7 +87,7 @@ query postList{
 
 const ALLRESOURCES = gql`
 query allResources{
-  resources(locales:en){
+  resources(orderBy: id_DESC, locales:en){
     category
     heading
     app
