@@ -8,12 +8,12 @@
 }
 
 .paper{
-    @apply text-gray-800;
+    @apply text-gray-700;
     background-color: #FAF0DA;
 }
 
 .white{
-    @apply text-gray-800;
+    @apply text-gray-700;
     @apply bg-white;
 
  
@@ -25,38 +25,37 @@
 
     h1{
         border-left:3px solid  #E94560;
-        padding: 20px 12px;
-        line-height: 1;
-        margin: 24px 12px;
-        letter-spacing: 1.2px;
-        @apply text-2xl
+        @apply text-2xl font-medium
     }
 
     h2{
         border-left:3px solid  #E94560;
-        padding: 8px 12px;
-        line-height: 2.5rem;
-        margin: 24px 12px;
+        padding: 12px 12px 6px 12px;
+        margin: 30px 12px;
         letter-spacing: 1.2px;
-        @apply text-xl
+        @apply text-2xl font-medium;
     }
 
     h3{
         border-left:3px solid  #E94560;
-        padding: 6px 12px;
+        padding:12px 12px 6px 12px;
         font-size: 1.5rem;
         line-height: 2.25rem;
-        margin: 12px 12px;
+        margin: 30px 12px;
         letter-spacing: 1.2px;
-        @apply text-lg
+        @apply text-lg font-medium
     }
 
     p{
-        padding: 12px 18px;
+        padding: 0px 18px;
         font-size: 1.35rem;
         letter-spacing: 1.6px;
-        margin-bottom: 24px;
-        @apply text-base 
+        margin-bottom: 20px;
+        @apply text-lg;
+
+        img{
+            margin: 12px auto;    
+        }
     }
 
     a{
@@ -67,19 +66,28 @@
 
     blockquote{
         margin: 12px 12px;
-        background-color: rgba(196, 196, 196, 0.07);
+        background-color: rgba(196, 196, 196, 0.301);
         border-radius: 5px;
         border-left: 5px  #E94560 solid;
+        font-style: italic;
+        font-weight: 300;
+
+        p{
+
+            @apply text-xl p-6;
+        }
     }
 
     ul{
         list-style-type: initial;
         margin: -12px 12px 12px 12px;
+        @apply text-lg;
 
         li{
-            margin: 0px 36px;
+            margin: 16px 36px;
             p{
                 margin: 0px;
+                
             }
         }
     }
@@ -88,10 +96,24 @@
         margin: 12px 12px;
         border-radius: 6px;
         background-color: #1a1a2ee3;
+
+
+        code{
+            min-width: 540px;
+            overflow-x: auto;
+        }
     }
 
     img{
         border-radius: 6px;
     }
+
+    div{
+        img{
+            margin: 12px auto;  
+        }
+    }
+
+
 
 }

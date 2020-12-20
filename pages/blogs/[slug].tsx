@@ -1,4 +1,5 @@
 import Navbar from "@components/Navbar/Navbar"
+import Head from 'next/head';
 import ContentMD from "@components/Markdown/markDown"
 import { GraphQLClient  } from 'graphql-request'
 import {POSTLIST, POST} from '@api/quries.ts'
@@ -31,6 +32,10 @@ const Post = ({postData}:any)=>{
 
     return (
         <main className="bg-primary text-white h-full pb-12">
+                  <Head>
+      <link rel="shortcut icon" href="/favicon.ico" />
+      <title>{postData.title} | Tapan Patel</title>
+      </Head>
             <Navbar />
             <div className="container m-auto px-1 sm:px-10 md:px-10 lg:px-32 xl:px-72">
                 <div>

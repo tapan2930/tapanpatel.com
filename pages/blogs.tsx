@@ -1,7 +1,6 @@
-
+import Head from 'next/head';
 import Link from 'next/link';
 import Navbar from "@components/Navbar/Navbar"
-import BigCard from "@components/Cards/bigCards"
 import Card from "@components/Cards/cards"
 import { GraphQLClient  } from 'graphql-request'
 import {PINNEDPOST, ALLPOST} from '@api/quries.ts'
@@ -23,6 +22,11 @@ const Post = ({pinnedPost, allPost}:any)=>{
 
     return (
         <main className="bg-primary text-text font-body pb-16">
+          <Head>
+          <link rel="shortcut icon" href="/favicon.ico" />
+      <title> Blogs | Tapan Patel</title>
+          </Head>
+
         <Navbar/>
 
         <div className="container mx-auto px-3 sm:px-10 md:px-10 lg:px-20 xl:px-40">
@@ -37,7 +41,7 @@ const Post = ({pinnedPost, allPost}:any)=>{
                         <Link href={`/blogs/${post.slug}`} >
                         <a href={`/blogs/${post.slug}`} >
                            <div id={`${idx}`}>
-                               <BigCard description={post.excerpt} title={post.title} cover={post.cover} tags={post.tags} app={""} code={""}  />
+                               <Card description={post.excerpt} title={post.title} cover={post.cover} tags={post.tags} app={""} code={""}   />
                            </div>
                            </a>
                  </Link>
@@ -57,7 +61,7 @@ const Post = ({pinnedPost, allPost}:any)=>{
                         <Link href={`/blogs/${post.slug}`} >
                         <a href={`/blogs/${post.slug}`} >
                            <div id={`${idx}`}>
-                              <Card description={post.excerpt} title={post.title} cover={post.cover} tags={post.tags} app={""} code={""} coverType={"object-cover w-full"}  />
+                              <Card description={post.excerpt} title={post.title} cover={post.cover} tags={post.tags} app={""} code={""}  />
                            </div>
                         </a>
                  </Link>

@@ -1,4 +1,5 @@
 import { NextPage } from 'next';
+import Head from 'next/head';
 import Navbar from "@components/Navbar/Navbar"
 import Card from "@components/Cards/cards"
 import { GraphQLClient  } from 'graphql-request'
@@ -9,6 +10,10 @@ const projectPage: NextPage = ({data}:any) => {
  
     return (
       <main className="bg-primary  text-text font-body pb-16 h-full">
+         <Head>
+          <link rel="shortcut icon" href="/favicon.ico" />
+      <title> Projects | Tapan Patel</title>
+          </Head>
           <Navbar/>
 
           <div className="container mx-auto px-3 sm:px-10 md:px-10 lg:px-20 xl:px-40">
@@ -18,7 +23,7 @@ const projectPage: NextPage = ({data}:any) => {
                 data.projects.map((project:any,idx:number)=>{
                   return (
                     <div id={`${idx}`} className="mb-6">
-                      <Card {...project} coverType={""} />
+                      <Card {...project} />
                     </div>
                   )
                 })

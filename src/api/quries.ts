@@ -85,7 +85,24 @@ query postList{
 }
 `
 
+const ALLRESOURCES = gql`
+query allResources{
+  resources(locales:en){
+    category
+    heading
+    app
+    description
+    cover(locales:en){
+      url(
+        transformation: {
+          image: { resize: { width: 500, height: 500, fit: crop } }
+        })
+    }
+  }
+}
+`
 
-export {ALLPROJECTS, POST, POSTLIST, PINNEDPOST, ALLPOST}
+
+export {ALLPROJECTS, POST, POSTLIST, PINNEDPOST, ALLPOST, ALLRESOURCES}
 
 

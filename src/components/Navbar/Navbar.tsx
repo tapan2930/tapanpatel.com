@@ -19,7 +19,7 @@ const Navbar = ()=> {
                 <div className="inline-block py-3 px-3">
               <Link href={`/`} >
                 <a>
-                <img width="60" src="/assets/logo.svg" alt="logo" />
+                <img width="50" src="/assets/logo.svg" alt="logo" />
                 </a>
                 </Link>
             </div>

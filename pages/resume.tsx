@@ -1,4 +1,5 @@
 import Navbar from "@components/Navbar/Navbar"
+import Head from 'next/head';
 import Link from "next/link";
 import { Document, Page } from "react-pdf";
 import { pdfjs } from "react-pdf";
@@ -10,6 +11,10 @@ function ResumeDisplay() {
 
     return (
         <div className="bg-primary text-text font-body pb-16 h-screen overflow-y-auto">
+                   <Head>
+          <link rel="shortcut icon" href="/favicon.ico" />
+      <title> Resume | Tapan Patel</title>
+          </Head>
             <Navbar />
             <div className="container mx-auto px-2 sm:px-10 md:px-10 lg:px-72   flex-col">
            <div className="mt-3 text-center">
