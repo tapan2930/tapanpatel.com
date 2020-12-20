@@ -23,7 +23,7 @@ const Post = ({pinnedPost, allPost}:any)=>{
     return (
         <main className="bg-primary text-text font-body pb-16">
           <Head>
-          <link rel="shortcut icon" href="/favicon.ico" />
+          <link rel="icon" href="/favicon.ico" />
       <title> Blogs | Tapan Patel</title>
           </Head>
 

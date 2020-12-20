@@ -33,7 +33,7 @@ const Post = ({postData}:any)=>{
     return (
         <main className="bg-primary text-white h-full pb-12">
                   <Head>
-      <link rel="shortcut icon" href="/favicon.ico" />
+      <link rel="icon" href="/favicon.ico" />
       <title>{postData.title} | Tapan Patel</title>
       </Head>
             <Navbar />

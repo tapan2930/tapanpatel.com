@@ -1,4 +1,5 @@
 import Navbar from "@components/Navbar/Navbar"
+import Head from 'next/head';
 import SmallCard from "@components/Cards/smallCard"
 import { GraphQLClient  } from 'graphql-request'
 import {ALLRESOURCES} from '@api/quries.ts'
@@ -9,6 +10,10 @@ const ResourcesPage = ({resources}:any)=>{
   const resourceCategory = [...resourceCatMap(resources)]
     return (
         <div className="text-gray-100 bg-primary">
+           <Head>
+          <link rel="icon" href="/favicon.ico" />
+      <title> Resume | Tapan Patel</title>
+          </Head>
           <Navbar />
           <div className="container mx-auto px-3 sm:px-10 md:px-10 lg:px-20 xl:px-40 py-6">
           {

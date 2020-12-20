@@ -6,7 +6,7 @@ const IndexPage: NextPage = () => {
   return (
     <main className="bg-primary text-white font-body">
       <Head>
-      <link rel="shortcut icon" href="/favicon.ico" />
+      <link rel="icon" href="/favicon.ico" />
       <title>Tapan Patel</title>
       </Head>
       <Header />

@@ -12,7 +12,7 @@ function ResumeDisplay() {
     return (
         <div className="bg-primary text-text font-body pb-16 h-screen overflow-y-auto">
                    <Head>
-          <link rel="shortcut icon" href="/favicon.ico" />
+          <link rel="icon" href="/favicon.ico" />
       <title> Resume | Tapan Patel</title>
           </Head>
             <Navbar />
