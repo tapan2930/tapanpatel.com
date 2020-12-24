@@ -12,7 +12,11 @@ function ResumeDisplay() {
     return (
         <div className="bg-primary text-text font-body pb-16 h-screen overflow-y-auto">
                    <Head>
-          <link rel="icon" href="/favicon.ico" />
+                   <meta property="og:url" content="https://pateltapan.com/resume" />
+      <meta property="og:type" content="web" />
+      <meta property="og:title" content="Tapan Patel Portfolio" />
+      <meta property="og:image" content="/og.png" />
+      <link rel="icon" href="/fevicon.ico" />
       <title> Resume | Tapan Patel</title>
           </Head>
             <Navbar />

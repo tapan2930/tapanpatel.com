@@ -6,7 +6,11 @@ const IndexPage: NextPage = () => {
   return (
     <main className="bg-primary text-white font-body">
       <Head>
-      <link rel="icon" href="/favicon.ico" />
+      <meta property="og:url" content="https://pateltapan.com/" />
+      <meta property="og:type" content="web" />
+      <meta property="og:title" content="Tapan Patel Portfolio" />
+      <meta property="og:image" content="/og.png" />
+      <link rel="icon" href="/fevicon.ico" />
       <title>Tapan Patel</title>
       </Head>
       <Header />

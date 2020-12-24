@@ -11,7 +11,11 @@ const ResourcesPage = ({resources}:any)=>{
     return (
         <div className="text-gray-100 bg-primary">
            <Head>
-          <link rel="icon" href="/favicon.ico" />
+           <meta property="og:url" content="https://pateltapan.com/resources" />
+      <meta property="og:type" content="web" />
+      <meta property="og:title" content="Tapan Patel Portfolio" />
+      <meta property="og:image" content="/og.png" />
+      <link rel="icon" href="/fevicon.ico" />
       <title> Resume | Tapan Patel</title>
           </Head>
           <Navbar />

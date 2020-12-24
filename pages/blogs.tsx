@@ -23,7 +23,11 @@ const Post = ({pinnedPost, allPost}:any)=>{
     return (
         <main className="bg-primary text-text font-body pb-16">
           <Head>
-          <link rel="icon" href="/favicon.ico" />
+          <meta property="og:url" content="https://pateltapan.com/blogs" />
+      <meta property="og:type" content="web" />
+      <meta property="og:title" content="Tapan Patel Portfolio" />
+      <meta property="og:image" content="/og.png" />
+      <link rel="icon" href="/fevicon.ico" />
       <title> Blogs | Tapan Patel</title>
           </Head>
 
