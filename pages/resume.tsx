@@ -22,7 +22,7 @@ function ResumeDisplay() {
             <Navbar />
             <div className="container mx-auto px-2 sm:px-10 md:px-10 lg:px-72   flex-col">
            <div className="mt-3 text-center">
-           <Link href={"assets/Resume.pdf"} >
+           <Link href={"assets/resume/TapanResume.pdf"} >
              <a>Download</a>
            </Link>
              </div>
