@@ -29,7 +29,7 @@ function ResumeDisplay() {
             <>
       <div className="mt-6  overflow-scroll lg:overflow-hidden relative left-0 lg:flex lg:justify-center ">      
         <Document
-          file='https://tapanpatel-com.vercel.app/assets/Resume.pdf'
+          file='https://tapanpatel-com.vercel.app/assets/resume/TapanResume.pdf'
           renderMode="canvas"
         >
           <Page pageNumber={1} />
