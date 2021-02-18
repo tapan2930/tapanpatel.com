@@ -1,11 +1,35 @@
-import type { AppProps } from 'next/app';
+import { useEffect } from "react";
+import type { AppProps } from "next/app";
+import { useRouter } from "next/router";
+import * as gtag from "../src/utils/gtags";
 
 import '../styles/prism.css';
 import '../styles/index.css';
 import '../styles/styles.css';
 
 
-const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
-  return (<div className="bg-tertiary"> <Component {...pageProps} /> </div>);
-};
-export default MyApp;
+// const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
+//   return (<div className="bg-tertiary"> <Component {...pageProps} /> </div>);
+// };
+
+
+const App = ({ Component, pageProps }: AppProps) => {
+  const router = useRouter();
+
+  if(process.env.NODE_ENV === 'production'){
+    useEffect(() => {
+      const handleRouteChange = (url: URL) => {
+        gtag.pageview(url);
+      };
+      router.events.on("routeChangeComplete", handleRouteChange);
+      return () => {
+        router.events.off("routeChangeComplete", handleRouteChange);
+      };
+    }, [router.events]);
+  }
+
+  return <Component {...pageProps} />;
+
+}
+
+export default App;

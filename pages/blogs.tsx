@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Navbar from "@components/Navbar/Navbar"
 import Card from "@components/Cards/cards"
 import { GraphQLClient  } from 'graphql-request'
-import {PINNEDPOST, ALLPOST} from '@api/quries.ts'
+import {PINNEDPOST, ALLPOST} from '@api/quries'
 
 interface postdata{
   title: string;

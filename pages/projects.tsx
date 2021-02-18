@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Navbar from "@components/Navbar/Navbar"
 import Card from "@components/Cards/cards"
 import { GraphQLClient  } from 'graphql-request'
-import {ALLPROJECTS} from '@api/quries.ts'
+import {ALLPROJECTS} from '@api/quries'
 
 
 const projectPage: NextPage = ({data}:any) => {
