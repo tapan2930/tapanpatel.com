@@ -2,7 +2,7 @@ import Navbar from "@components/Navbar/Navbar"
 import Head from 'next/head';
 import ContentMD from "@components/Markdown/markDown"
 import { GraphQLClient  } from 'graphql-request'
-import {POSTLIST, POST} from '@api/quries.ts'
+import {POSTLIST, POST} from '@api/quries'
 import { BsDot } from "react-icons/bs"
 import Link from "next/link"
 
@@ -91,6 +91,7 @@ export async function getStaticProps({params}:any) {
 export async function getStaticPaths(){
     const postGraphCMS = new GraphQLClient(process.env.API_ENDPOINT! , { headers: {} })
     const {posts: postList} =  await postGraphCMS.request(POSTLIST) 
+    
     return {
         paths: postList.map((pl:postList)=>{
             return {

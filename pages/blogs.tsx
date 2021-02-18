@@ -4,6 +4,7 @@ import Navbar from "@components/Navbar/Navbar"
 import Card from "@components/Cards/cards"
 import { GraphQLClient  } from 'graphql-request'
 import {PINNEDPOST, ALLPOST} from '@api/quries'
+import generateSitemap from "../src/utils/sitemap"
 
 interface postdata{
   title: string;
@@ -85,6 +86,7 @@ export async function getStaticProps() {
     const postGraphCMS = new GraphQLClient(process.env.API_ENDPOINT! , { headers: {} })
     const {posts:pinnedPost} =  await postGraphCMS.request(PINNEDPOST) 
     const {posts:allPost} =  await postGraphCMS.request(ALLPOST) 
+    await generateSitemap(allPost)
     return {
       props: {
         pinnedPost,
