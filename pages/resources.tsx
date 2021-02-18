@@ -30,7 +30,6 @@ const ResourcesPage = ({resources}:any)=>{
                       resourceSorter(resources,cat).map((resource,cidx)=>{
                         return(
                         <a href={`${resource.app}`} target="_blank" >
-                         { console.log(resource.app)}
                            <div id={`${cidx}`}>
                               <SmallCard description={resource.description} title={resource.heading} cover={resource.cover}  />
                            </div>

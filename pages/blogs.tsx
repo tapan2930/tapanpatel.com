@@ -61,7 +61,6 @@ const Post = ({pinnedPost, allPost}:any)=>{
                 <div className=" grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6  mt-6">
                 {
                    allPost.map((post:postdata, idx:Number)=>{
-                     console.log(post)
                        return (
                         <Link href={`/blogs/${post.slug}`} >
                         <a href={`/blogs/${post.slug}`} >

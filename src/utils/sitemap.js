@@ -11,7 +11,7 @@ async function generateSitemap(postList) {
     return;
   }
 
-  const baseUrl = process.env.BASE_URL;
+  const baseUrl = "https://pateltapan.com";
   const pages = await globby([
     'pages/**/*{.tsx,.ts}',
     '!pages/**/[*',
@@ -45,11 +45,15 @@ async function generateSitemap(postList) {
   const links = [...pageLinks, ...postLinks];
   const stream = new SitemapStream({ hostname: baseUrl });
 
-  const xml = await streamToPromise(Readable.from(links).pipe(stream)).then((data) =>
+  const xml = await streamToPromise(Readable.from(links).pipe(stream).on("error", err=>{console.log(err)})).then((data) =>
     data.toString()
   );
 
   fs.writeFileSync('./public/sitemap.xml', xml);
+
+  // readable.on("error", err => { 
+  //   console.log(err); 
+  // }); 
 }
 
 export default generateSitemap;
