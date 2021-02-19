@@ -5,6 +5,8 @@ import { GraphQLClient  } from 'graphql-request'
 import {POSTLIST, POST} from '@api/quries'
 import { BsDot } from "react-icons/bs"
 import Link from "next/link"
+import { motion } from "framer-motion"
+
 
 
 interface postList {
@@ -31,7 +33,8 @@ interface postList {
 const Post = ({postData}:any)=>{
 
     return (
-        <main className="bg-primary text-white h-full pb-12">
+        <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}}>
+             <main className="bg-primary text-white h-full pb-12">
                   <Head>
       <link rel="icon" href="/favicon.ico" />
       <title>{postData.title} | Tapan Patel</title>
@@ -69,6 +72,8 @@ const Post = ({postData}:any)=>{
           
             </div>
         </main>
+        </motion.div>
+       
     )
 }
 
