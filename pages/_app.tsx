@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import type { AppProps } from "next/app";
+import {useRouter } from "next/router";
 import * as gtag from "../src/utils/gtags";
 import {AnimatePresence} from "framer-motion";
 
