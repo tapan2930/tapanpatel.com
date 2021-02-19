@@ -11,7 +11,7 @@ import { motion } from "framer-motion"
 const projectPage: NextPage = ({data}:any) => {
     return (
       <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}}>
-           <main className="bg-primary  text-text font-body pb-16 h-full overflow-x-hidden">
+           <main className="bg-primary  text-text font-body pb-16 h-full">
         <Head>
         <meta property="og:url" content="https://pateltapan.com/projects" />
      <meta property="og:type" content="web" />
