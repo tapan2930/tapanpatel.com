@@ -11,7 +11,7 @@ import { motion } from "framer-motion"
 const ResourcesPage = ({resources}:any)=>{
   const resourceCategory = [...resourceCatMap(resources)]
     return (
-      <motion.div>
+      <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}}>
           <div className="text-gray-100 bg-primary">
            <Head>
            <meta property="og:url" content="https://pateltapan.com/resources" />
