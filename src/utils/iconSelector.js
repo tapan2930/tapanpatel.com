@@ -12,7 +12,7 @@ export const iconSelector = (name) =>{
         case "twitter": return <AiOutlineTwitter />;
         case "linkdin": return <AiOutlineLinkedin />;
         case "stackOverFlow": return <FaStackOverflow />;
-        case "Unsplash": return <RiUnsplashFill />;
+        case "unsplash": return <RiUnsplashFill />;
         case "web": return <CgDisplayGrid />;
         case "code": return <BsFileCode />;
         case "email": return <AiOutlineMail />
