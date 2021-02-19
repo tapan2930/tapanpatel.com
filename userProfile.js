@@ -14,8 +14,8 @@ const userProfile  = {
             link: "https://www.linkedin.com/in/tapan-patel-7567511a5/"
         },
         {
-            service: "twitter",
-            link: "https://twitter.com/tapan2930"
+            service: "unsplash",
+            link: "https://unsplash.com/@tapan_p"
         },
         {
             service: "instagram", 

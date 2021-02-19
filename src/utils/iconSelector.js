@@ -2,6 +2,8 @@ import {AiOutlineMail,AiOutlineGithub, AiOutlineLinkedin, AiOutlineFacebook,AiOu
 import {FaStackOverflow} from 'react-icons/fa'
 import { CgDisplayGrid } from "react-icons/cg"
 import { BsFileCode } from "react-icons/bs"
+import { RiUnsplashFill } from "react-icons/ri"
+
 export const iconSelector = (name) =>{
     switch(name){
         case  "facebook": return <AiOutlineFacebook />;
@@ -10,6 +12,7 @@ export const iconSelector = (name) =>{
         case "twitter": return <AiOutlineTwitter />;
         case "linkdin": return <AiOutlineLinkedin />;
         case "stackOverFlow": return <FaStackOverflow />;
+        case "Unsplash": return <RiUnsplashFill />;
         case "web": return <CgDisplayGrid />;
         case "code": return <BsFileCode />;
         case "email": return <AiOutlineMail />
