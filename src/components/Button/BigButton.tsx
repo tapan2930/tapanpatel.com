@@ -7,6 +7,7 @@ interface IProps {
   }
   
   const BigButton = ({ text, link }: IProps) => {
+    
 
     return (
       <Link href={`${link}`}>

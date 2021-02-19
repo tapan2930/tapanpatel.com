@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import type { AppProps } from "next/app";
-import { useRouter } from "next/router";
+import { Router, useRouter } from "next/router";
 import * as gtag from "../src/utils/gtags";
+import {AnimatePresence} from "framer-motion";
 
 import '../styles/prism.css';
 import '../styles/index.css';
@@ -28,7 +29,7 @@ const App = ({ Component, pageProps }: AppProps) => {
     }, [router.events]);
   }
 
-  return <Component {...pageProps} />;
+  return <AnimatePresence exitBeforeEnter > <div className="bg-primary"> <Component {...pageProps} key={router.route} /> </div> </AnimatePresence>;
 
 }
 

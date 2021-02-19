@@ -3,6 +3,8 @@ import Head from 'next/head';
 import Link from "next/link";
 import { Document, Page } from "react-pdf";
 import { pdfjs } from "react-pdf";
+import { motion } from "framer-motion"
+
 
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
@@ -10,6 +12,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 function ResumeDisplay() {
 
     return (
+      <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} >
         <div className="bg-primary text-text font-body pb-16 h-screen overflow-y-auto">
                    <Head>
                    <meta property="og:url" content="https://pateltapan.com/resume" />
@@ -38,7 +41,9 @@ function ResumeDisplay() {
       </> 
   
         </div>   
-        </div>  
+        </div>
+      </motion.div>
+          
     );
   }
   export default ResumeDisplay

@@ -2,14 +2,17 @@ import Navbar from "@components/Navbar/Navbar"
 import Head from 'next/head';
 import SmallCard from "@components/Cards/smallCard"
 import { GraphQLClient  } from 'graphql-request'
-import {ALLRESOURCES} from '@api/quries.ts'
+import {ALLRESOURCES} from '@api/quries'
 import resourceCatMap  from '@utils/resourceCategoryMapper'
 import resourceSorter  from '@utils/resourceSorter'
+import { motion } from "framer-motion"
+
 
 const ResourcesPage = ({resources}:any)=>{
   const resourceCategory = [...resourceCatMap(resources)]
     return (
-        <div className="text-gray-100 bg-primary">
+      <motion.div>
+          <div className="text-gray-100 bg-primary">
            <Head>
            <meta property="og:url" content="https://pateltapan.com/resources" />
       <meta property="og:type" content="web" />
@@ -46,6 +49,8 @@ const ResourcesPage = ({resources}:any)=>{
           }
           </div>
         </div>
+      </motion.div>
+        
 
     )
 }

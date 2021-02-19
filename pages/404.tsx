@@ -1,8 +1,11 @@
 import Link from "next/link"
+import { motion } from "framer-motion"
+
 
 const error404 = () =>{
     return (
-        <div className="bg-primary text-text font-body pb-16 h-screen">
+        <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} >
+            <div className="bg-primary text-text font-body pb-16 h-screen">
             <div className="flex justify-center items-center h-full flex-col">
                 <div className="bg-tertiary frost p-4 rounded-md shadow-md text-xl ">
                     <span className="mr-2">404</span>
@@ -19,6 +22,8 @@ const error404 = () =>{
                     
             </div>
         </div>
+        </motion.div>
+        
     )
 }
 

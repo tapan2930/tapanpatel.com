@@ -1,10 +1,12 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
 import Header from "@components/Header/Header"
+import {motion} from "framer-motion";
 
 const IndexPage: NextPage = () => {
   return (
-    <main className="bg-primary text-white font-body">
+    <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}}>
+       <main className="bg-primary text-white font-body">
       <Head>
         <meta name="title" content="Tapan Patel | Fullstack Developer, Wants to create an amazing User Experience"/>
         <meta name="description" content="I am a Fullstack developers, Building great user interface, scaleable and amazing apps."/>
@@ -29,6 +31,8 @@ const IndexPage: NextPage = () => {
       </Head>
       <Header />
     </main>
+    </motion.div>
+   
   )
 }
 export default IndexPage;

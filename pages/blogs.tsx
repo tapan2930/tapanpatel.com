@@ -5,6 +5,8 @@ import Card from "@components/Cards/cards"
 import { GraphQLClient  } from 'graphql-request'
 import {PINNEDPOST, ALLPOST} from '@api/quries'
 import generateSitemap from "../src/utils/sitemap"
+import { motion } from "framer-motion"
+
 
 interface postdata{
   title: string;
@@ -22,7 +24,8 @@ interface postdata{
 const Post = ({pinnedPost, allPost}:any)=>{
 
     return (
-        <main className="bg-primary text-text font-body pb-16">
+      <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} >
+           <main className="bg-primary text-text font-body pb-16">
           <Head>
           <meta property="og:url" content="https://pateltapan.com/blogs" />
       <meta property="og:type" content="web" />
@@ -77,6 +80,8 @@ const Post = ({pinnedPost, allPost}:any)=>{
           </div>
         </div>
     </main>
+      </motion.div>
+       
     )
 }
 
