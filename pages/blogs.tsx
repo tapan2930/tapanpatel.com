@@ -35,7 +35,7 @@ const Post = ({pinnedPost, allPost}:any)=>{
       <title> Blogs | Tapan Patel</title>
           </Head>
 
-        <Navbar/>
+        <Navbar />
 
         <div className="container mx-auto px-3 sm:px-10 md:px-10 lg:px-20 xl:px-40">
           {/* <div className="text-center pt-16"> <h1 className="text-4xl">Blogs</h1></div> */}
