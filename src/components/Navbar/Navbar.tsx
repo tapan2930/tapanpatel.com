@@ -13,7 +13,7 @@ const Navbar = ()=> {
   const menuOnClickHandler = (toggle:boolean) => setNavToggle(toggle)
 
     return(
-        <header className={`bg-test frost sticky top-0 w-full text-gray-300 z-50`}>
+        <header className={`bg-test frost sticky shadow-sm top-0 w-full text-gray-300 z-50`}>
              <div className="lg:flex lg:flex-row items-center lg:justify-between">
                 <div className="flex items-center justify-between lg:justify-start">
                 <div className="inline-block py-3 px-3">
