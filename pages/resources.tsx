@@ -8,6 +8,7 @@ import PageHead from "../src/utils/HeadHelper/index"
 
 
 
+
 const ResourcesPage = ({resources}:any)=>{
   const resourceCategory = [...resourceCatMap(resources)]
     return (
@@ -26,7 +27,7 @@ const ResourcesPage = ({resources}:any)=>{
                         return(
                         <a rel="noreferrer" href={`${resource.app}`} target="_blank" >
                            <div id={`${cidx}`}>
-                              <SmallCard description={resource.description} title={resource.heading} cover={resource.cover} url={resource.app}  />
+                              <SmallCard description={resource.description} title={resource.heading} coverUrl={resource.cover.url} url={resource.app} imgPlaceholder={resource.cover.placeholder}  />
                            </div>
                         </a>
                         )
@@ -53,7 +54,6 @@ export async function getStaticProps() {
   return {
     props: {
       resources,
-
     }
   }
 }

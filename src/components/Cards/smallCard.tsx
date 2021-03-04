@@ -1,23 +1,33 @@
+import MyImage from "@components/ImageLazyLoad";
 import React from "react";
 // import { BiLink } from "react-icons/bi";
 
 interface IProps {
   title: string;
   description: string;
-  cover: any;
+  coverUrl: string;
   url?: string;
+  imgPlaceholder?:string
 }
 
-const SmallCard = (props: IProps) => {
+const SmallCard: React.FC<IProps> = (props: IProps): React.ReactElement => {
   let description = props.description.slice(0, 150);
+  
+  const  image = {
+      alt: props.title,
+      scr: props.coverUrl,
+      placeholderSrc:props.imgPlaceholder
+    }
+ 
   return (
     <div className="transition duration-200 transform hover:-translate-y-2 shadow-md  hover:shadow-sm ease-in-out flex flex-col sm:flex-row bg-tertiary rounded-sm">
       <div className=" h-44 sm:w-28 sm:h-auto overflow-hidden flex-none  bg-gray-200">
-        <img
+        <MyImage {...image} />
+        {/* <img
           className="w-full h-full object-cover object-center"
-          src={props.cover.url}
+          src={props.coverUrl}
           alt={props.title}
-        />
+        /> */}
       </div>
       <div className="py-3 px-3 md:px-6 w-full">
         <div>
@@ -50,4 +60,5 @@ const urlCleaner = (url: string) => {
   return url.slice(0, url!.length - 1);
 };
 
-export default SmallCard;
+
+export default SmallCard

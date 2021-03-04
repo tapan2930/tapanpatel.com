@@ -97,10 +97,13 @@ query allResources{
         transformation: {
           image: { resize: { width: 500, height: 500, fit: crop } }
         })
+        
     }
   }
 }
 `
+
+
 
 
 export {ALLPROJECTS, POST, POSTLIST, PINNEDPOST, ALLPOST, ALLRESOURCES}
