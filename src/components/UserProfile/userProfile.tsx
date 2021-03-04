@@ -30,7 +30,7 @@ const UserProfile = ()=>{
             <div className="rounded-full w-64 h-64 overflow-hidden bg-secondary opacity-90 shadow-md border border-secondary inline-block mx-auto mb-10 md:mb-16">
               <img src={userProfile.profile} alt="profile" width="256px" />
             </div>
-            <div className=" bg-tertiary frost shadow-md   px-12 py-4 text-center md:w-96 border-secondary border-dotted rounded-lg ">
+            <div className=" bg-tertiary frost shadow-md   px-12 py-4 text-center md:w-96  border border-secondary border-dotted rounded-lg ">
               <h1 className="text-4xl tracking-wide pb-2">
                 {userProfile.name}
               </h1>
