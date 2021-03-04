@@ -40,7 +40,8 @@
 }    
 
 body::-webkit-scrollbar {
-  width: 0.2em;
+  width: 0.5em;
+  border-radius: 10px;
 }
  
 body::-webkit-scrollbar-track {
@@ -48,7 +49,7 @@ body::-webkit-scrollbar-track {
 }
  
 body::-webkit-scrollbar-thumb {
-  background-color: rgb(209, 92, 112);
+  background-color: rgb(29, 29, 29);
   outline: none
 }
 .noSelect {
