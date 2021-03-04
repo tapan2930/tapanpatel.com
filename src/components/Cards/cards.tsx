@@ -13,13 +13,13 @@ interface IProps {
 
 const Card = (props:IProps)=>{
     return (
-        <div className="transition duration-200 transform hover:-translate-y-2 shadow-md  hover:shadow-sm ease-in-out flex flex-col bg-tertiary rounded-sm">
-        <div className=" bg-gray-50 h-48 sm:h-52 md:h-64 overflow-hidden">
+        <div className="transition duration-200 transform hover:-translate-y-2 shadow-md rounded-md  hover:shadow-sm ease-in-out flex flex-col bg-tertiary overflow-hidden border border-gray-700 ">
+        <div className=" bg-gray-50 h-48 sm:h-52 md:h-64 overflow-hidden ">
           <img className=" object-cover w-full h-full object-center" src={props.cover.url} alt={props.title} />
         </div>
         <div className="py-4 px-3 md:px-6 w-full">
           <div>
-            <h1 className="text-lg font-semibold capitalize text-gray-100">
+            <h1 className="text-lg font-semibold capitalize text-gray-100 h-14">
               {props.title}
             </h1>
           </div>

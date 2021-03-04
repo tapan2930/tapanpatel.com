@@ -26,7 +26,7 @@ const Navbar = ()=> {
             <div className="hidden lg:block">
               {userProfile.socialMediaProfile.map((socialMedia, idx) => {
                 return (
-                  <div id={`${idx}`} className="inline-block mx-1 text-xl">
+                  <div id={`${idx}`} className="mx-1 text-xl inline-flex items-center">
                     <IconButton
                       text={socialMedia.service}
                       link={socialMedia.link}
@@ -42,7 +42,7 @@ const Navbar = ()=> {
                
                
                
-                <div className={`${navToggle? "h-screen flex flex-col": "hidden"} lg:flex lg:flex-row `}>
+                <div className={`${navToggle? "h-screen fadein flex flex-col z-20": " hidden "} lg:flex lg:flex-row  `}>
                 {
                 navbarData.map((navData,idx)=>{
                     return (

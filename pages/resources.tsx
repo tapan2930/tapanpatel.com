@@ -5,6 +5,7 @@ import resourceCatMap  from '@utils/resourceCategoryMapper'
 import resourceSorter  from '@utils/resourceSorter'
 import Base from "../src/Base/index"
 import PageHead from "../src/utils/HeadHelper/index"
+import { BiCreditCardFront } from "react-icons/bi"
 
 
 
@@ -20,8 +21,8 @@ const ResourcesPage = ({resources}:any)=>{
             resourceCategory.map((cat,idx)=>{
               return (
                 <div className="mb-12"  id={`${idx}`}>
-                  <h2 className="text-xl text-gray-100 "> {cat.split("_").join(" ")} </h2>
-                  <div className=" grid sm:grid-cols-1 md:grid-cols-2 gap-6  mt-6">
+                  <h2 className="text-xl text-gray-100 inline-flex items-center "> <span className="mr-2 text-secondary text-3xl"> <BiCreditCardFront /></span>  {cat.split("_").join(" ")} </h2>
+                  <div className=" grid sm:grid-cols-1 md:grid-cols-2 gap-6  mt-3">
                     {
                       resourceSorter(resources,cat).map((resource,cidx)=>{
                         return(
