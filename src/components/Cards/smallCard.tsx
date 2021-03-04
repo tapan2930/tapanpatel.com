@@ -23,11 +23,7 @@ const SmallCard: React.FC<IProps> = (props: IProps): React.ReactElement => {
     <div className="transition duration-200 transform hover:-translate-y-2 shadow-md  hover:shadow-sm ease-in-out flex flex-col sm:flex-row bg-tertiary rounded-sm">
       <div className=" h-44 sm:w-28 sm:h-auto overflow-hidden flex-none  bg-gray-200">
         <MyImage {...image} />
-        {/* <img
-          className="w-full h-full object-cover object-center"
-          src={props.coverUrl}
-          alt={props.title}
-        /> */}
+
       </div>
       <div className="py-3 px-3 md:px-6 w-full">
         <div>
