@@ -1,11 +1,10 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import Navbar from "@components/Navbar/Navbar"
 import Card from "@components/Cards/cards"
 import { GraphQLClient  } from 'graphql-request'
 import {PINNEDPOST, ALLPOST} from '@api/quries'
 import generateSitemap from "../src/utils/sitemap"
-import { motion } from "framer-motion"
+import Base from "../src/Base/index"
 
 
 interface postdata{
@@ -24,7 +23,7 @@ interface postdata{
 const Post = ({pinnedPost, allPost}:any)=>{
 
     return (
-      <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} >
+      // <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} >
            <main className="bg-primary text-text font-body pb-16">
           <Head>
           <meta property="og:url" content="https://pateltapan.com/blogs" />
@@ -35,9 +34,10 @@ const Post = ({pinnedPost, allPost}:any)=>{
       <title> Blogs | Tapan Patel</title>
           </Head>
 
-        <Navbar />
+        {/* <Navbar /> */}
 
-        <div className="container mx-auto px-3 sm:px-10 md:px-10 lg:px-20 xl:px-40">
+      <Base> 
+      <div className="container mx-auto px-3 sm:px-10 md:px-10 lg:px-20 xl:px-40">
           {/* <div className="text-center pt-16"> <h1 className="text-4xl">Blogs</h1></div> */}
           <div className="my-8">
             <div className="mb-16">
@@ -79,8 +79,9 @@ const Post = ({pinnedPost, allPost}:any)=>{
             </div>
           </div>
         </div>
+      </Base>
     </main>
-      </motion.div>
+      // </motion.div>
        
     )
 }

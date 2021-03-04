@@ -1,31 +1,29 @@
-import Navbar from "@components/Navbar/Navbar";
 import ContentMD from "@components/Markdown/markDown";
 import { GraphQLClient } from "graphql-request";
 import { POSTLIST, POST } from "@api/quries";
 import { BsDot } from "react-icons/bs";
 import PageHead from "../../src/utils/HeadHelper/index";
-import { motion } from "framer-motion";
-import { useRouter } from 'next/router';
-import Link from 'next/link';
+import { useRouter } from "next/router";
+import Link from "next/link";
+import Base from "src/Base";
 
 interface postList {
   slug: string;
 }
 
-
 const Post = ({ postData }: any) => {
-    const router = useRouter()
+  const router = useRouter();
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
-      <main className="bg-primary text-white h-full pb-12">
 
-        <PageHead imgUrl={postData.cover.url} description={postData.title + postData.excerpt + postData.tags} title={postData.title} url={router.pathname} />
-      
-        <Navbar />
+      <main className="bg-primary text-white h-full pb-12">
+        <PageHead
+          imgUrl={postData.cover.url}
+          description={postData.title + postData.excerpt + postData.tags}
+          title={postData.title}
+          url={router.pathname}
+        />
+
+        <Base>
         <div className="container m-auto px-1 sm:px-10 md:px-10 lg:px-32 xl:px-72">
           <div>
             <div>
@@ -63,8 +61,10 @@ const Post = ({ postData }: any) => {
             </div>
           </div>
         </div>
+        </Base>
+       
       </main>
-    </motion.div>
+
   );
 };
 

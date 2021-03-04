@@ -1,22 +1,15 @@
 import { NextPage } from "next";
-import Navbar from "@components/Navbar/Navbar";
 import Card from "@components/Cards/cards";
 import { GraphQLClient } from "graphql-request";
 import { ALLPROJECTS } from "@api/quries";
-import { motion } from "framer-motion";
 import PageHead from "../src/utils/HeadHelper/index";
+import Base from "../src/Base/index"
 
 const projectPage: NextPage = ({ data }: any) => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
       <main className="bg-primary  text-text font-body pb-16 h-full">
         <PageHead url="https://pateltapan/projects" />
-
-        <Navbar />
+        <Base>
         <div className="container mx-auto px-3 sm:px-10 md:px-10 lg:px-20 xl:px-40">
           <div className="pt-6  md:pt-8 ">
             {" "}
@@ -33,8 +26,8 @@ const projectPage: NextPage = ({ data }: any) => {
             })}
           </div>
         </div>
+        </Base>
       </main>
-    </motion.div>
   );
 };
 

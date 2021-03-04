@@ -1,27 +1,19 @@
-import Navbar from "@components/Navbar/Navbar"
-import Head from 'next/head';
 import SmallCard from "@components/Cards/smallCard"
 import { GraphQLClient  } from 'graphql-request'
 import {ALLRESOURCES} from '@api/quries'
 import resourceCatMap  from '@utils/resourceCategoryMapper'
 import resourceSorter  from '@utils/resourceSorter'
-import { motion } from "framer-motion"
+import Base from "../src/Base/index"
+import PageHead from "../src/utils/HeadHelper/index"
+
 
 
 const ResourcesPage = ({resources}:any)=>{
   const resourceCategory = [...resourceCatMap(resources)]
     return (
-      <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}}>
           <div className="text-gray-100 bg-primary">
-           <Head>
-           <meta property="og:url" content="https://pateltapan.com/resources" />
-      <meta property="og:type" content="web" />
-      <meta property="og:title" content="Tapan Patel Portfolio" />
-      <meta property="og:image" content="/og.png" />
-      <link rel="icon" href="/fevicon.ico" />
-      <title> Resume | Tapan Patel</title>
-          </Head>
-          <Navbar />
+          <PageHead url="https://pateltapan.com/resources" title={"Resources | Tapan Patel"}/>
+          <Base>
           <div className="container mx-auto px-3 sm:px-10 md:px-10 lg:px-20 xl:px-40 py-6">
           {
             resourceCategory.map((cat,idx)=>{
@@ -48,10 +40,9 @@ const ResourcesPage = ({resources}:any)=>{
             })
           }
           </div>
+          </Base>
+         
         </div>
-      </motion.div>
-        
-
     )
 }
 
