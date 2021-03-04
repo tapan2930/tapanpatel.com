@@ -11,7 +11,7 @@ import PageHead from "../src/utils/HeadHelper/index"
 const ResourcesPage = ({resources}:any)=>{
   const resourceCategory = [...resourceCatMap(resources)]
     return (
-          <div className="text-gray-100 bg-primary">
+          <div className="bg-primary text-text font-body pb-16">
           <PageHead url="https://pateltapan.com/resources" title={"Resources | Tapan Patel"}/>
           <Base>
           <div className="container mx-auto px-3 sm:px-10 md:px-10 lg:px-20 xl:px-40 py-6">

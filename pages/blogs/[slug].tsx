@@ -15,7 +15,7 @@ const Post = ({ postData }: any) => {
   const router = useRouter();
   return (
 
-      <main className="bg-primary text-white h-full pb-12">
+      <main className="bg-primary text-text font-body pb-16">
         <PageHead
           imgUrl={postData.cover.url}
           description={postData.title + postData.excerpt + postData.tags}
