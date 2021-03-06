@@ -22,7 +22,7 @@ const Card = (props:IProps)=>{
     wrapperStyle:"bg-gray-50 h-48 sm:h-52 md:h-64 overflow-hidden"
   }
     return (
-        <div className="transition duration-200 transform hover:-translate-y-2 shadow-md rounded-md  hover:shadow-sm ease-in-out flex flex-col bg-tertiary overflow-hidden ">
+        <div className="transition duration-200 transform hover:-translate-y-2 shadow-md rounded-md  hover:shadow-sm ease-in-out flex flex-col bg-tertiary overflow-hidden border border-gray-700 ">
           <a href={props.code} rel="noopener noreferrer nofollow"> <MyImage {...image}  /> </a>
         <div className="py-4 px-3 md:px-6 w-full">
           <div>
