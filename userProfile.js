@@ -3,7 +3,8 @@ const userProfile  = {
     designation: "Fullstack Developer",
     setLinePrimary: "I [design] and [build] apps,",
     setLineSecondary: "and everything that comes with it.",
-    profile: "/assets/tapan-10.png",
+    profile: "/assets/profile.png",
+    placeholder:"/assets/profile-placeholder.png",
     socialMediaProfile: [
         {
             service: "github",
