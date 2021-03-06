@@ -2,15 +2,18 @@ import React from 'react';
 import { LazyLoadImage, trackWindowScroll } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
-const MyImage = ({ alt,scr,placeholderSrc }:any) => (
+const MyImage = ({ alt,src,placeholderSrc,wrapperStyle,style }:any) => (
     <>
+    {
+      console.log(src)
+    }
       <LazyLoadImage
         alt={alt}
-        src={scr} 
+        src={src} 
         effect="blur"
         placeholderSrc={placeholderSrc}
-        style={{"width":"100%", "height":"100%", "objectFit":"cover", "objectPosition": "center" , "display": "block"}}
-        wrapperClassName={"w-full h-full object-cover object-center"}
+        style={style}
+        wrapperClassName={wrapperStyle}
         />
     </>
   );

@@ -28,7 +28,7 @@ const ResourcesPage = ({resources}:any)=>{
                         return(
                         <a rel="noreferrer" href={`${resource.app}`} target="_blank" >
                            <div id={`${cidx}`}>
-                              <SmallCard description={resource.description} title={resource.heading} coverUrl={resource.cover.url} url={resource.app} imgPlaceholder={resource.cover.placeholder}  />
+                              <SmallCard description={resource.description} title={resource.heading} coverUrl={resource.cover.url} url={resource.app} placeholder={resource.cover.placeholder}  />
                            </div>
                         </a>
                         )

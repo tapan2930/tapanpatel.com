@@ -7,7 +7,7 @@ interface IProps {
   description: string;
   coverUrl: string;
   url?: string;
-  imgPlaceholder?:string
+  placeholder?:string
 }
 
 const SmallCard: React.FC<IProps> = (props: IProps): React.ReactElement => {
@@ -16,7 +16,9 @@ const SmallCard: React.FC<IProps> = (props: IProps): React.ReactElement => {
   const  image = {
       alt: props.title,
       scr: props.coverUrl,
-      placeholderSrc:props.imgPlaceholder
+      placeholderSrc:props.placeholder,
+      style: {"width":"100%", "height":"100%", "objectFit":"cover", "objectPosition": "center" , "display": "block"},
+      wrapperStyle: "w-full h-full object-cover object-center"
     }
  
   return (

@@ -12,7 +12,11 @@ query{
       code,
       cover(locales:[en]){
         fileName,
-        url
+        url,
+        placeholder:url(
+          transformation: {
+            image: { resize: { width: 50, height: 50, fit: clip } }
+          })
       }
     }
   }
@@ -96,6 +100,10 @@ query allResources{
       url(
         transformation: {
           image: { resize: { width: 500, height: 500, fit: crop } }
+        }),
+      placeholder:url(
+        transformation: {
+          image: { resize: { width: 50, height: 50, fit: clip } }
         })
         
     }
