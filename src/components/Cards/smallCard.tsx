@@ -15,7 +15,7 @@ const SmallCard: React.FC<IProps> = (props: IProps): React.ReactElement => {
   
   const  image = {
       alt: props.title,
-      scr: props.coverUrl,
+      src: props.coverUrl,
       placeholderSrc:props.placeholder,
       style: {"width":"100%", "height":"100%", "objectFit":"cover", "objectPosition": "center" , "display": "block"},
       wrapperStyle: "w-full h-full object-cover object-center"
