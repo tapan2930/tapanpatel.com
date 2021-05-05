@@ -88,7 +88,7 @@ const Post = ({pinnedPost, allPost}:any)=>{
 
 
 export async function getStaticProps() {
-    const postGraphCMS = new GraphQLClient(process.env.API_ENDPOINT! , { headers: {} })
+    const postGraphCMS = new GraphQLClient(process.env.NEXT_PUBLIC_API_ENDPOINT! , { headers: {} })
     const {posts:pinnedPost} =  await postGraphCMS.request(PINNEDPOST) 
     const {posts:allPost} =  await postGraphCMS.request(ALLPOST) 
     await generateSitemap(allPost)

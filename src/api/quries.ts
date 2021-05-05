@@ -4,7 +4,7 @@ import { gql } from 'graphql-request'
 
 const ALLPROJECTS = gql`
 query{
-    projects(stage: PUBLISHED) {
+    projects(stage: PUBLISHED, orderBy:createdAt_DESC) {
       title,
       description,
       tags,

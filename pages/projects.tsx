@@ -32,7 +32,7 @@ const projectPage: NextPage = ({ data }: any) => {
 };
 
 export async function getStaticProps() {
-  const client = new GraphQLClient(process.env.API_ENDPOINT!, { headers: {} });
+  const client = new GraphQLClient(process.env.NEXT_PUBLIC_API_ENDPOINT!, { headers: {} });
   const data = await client.request(ALLPROJECTS);
   return {
     props: {

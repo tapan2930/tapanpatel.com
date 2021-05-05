@@ -74,7 +74,7 @@ export async function getStaticProps({ params }: any) {
   const variable = {
     slug: params.slug,
   };
-  const postListGraphCMS = new GraphQLClient(process.env.API_ENDPOINT!, {
+  const postListGraphCMS = new GraphQLClient(process.env.NEXT_PUBLIC_API_ENDPOINT!, {
     headers: {},
   });
   const { post } = await postListGraphCMS.request(POST, variable);
@@ -86,7 +86,7 @@ export async function getStaticProps({ params }: any) {
 }
 
 export async function getStaticPaths() {
-  const postGraphCMS = new GraphQLClient(process.env.API_ENDPOINT!, {
+  const postGraphCMS = new GraphQLClient(process.env.NEXT_PUBLIC_API_ENDPOINT!, {
     headers: {},
   });
   const { posts: postList } = await postGraphCMS.request(POSTLIST);

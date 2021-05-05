@@ -12,7 +12,6 @@ const IndexPage: NextPage = () => {
     >
       <main className="bg-primary text-white font-body">
         <PageHead />
-
         <Header />
       </main>
     </motion.div>

@@ -6,7 +6,7 @@ interface IProps {
 
 const Hashtag = ({title}: IProps)=>{
     return (
-        <div className="text-xs bg-hash p-1 rounded-md font-light tracking-wide">
+        <div className="text-xs p-1 rounded-md  tracking-wide text-pink-500 bg-trueGray-800 flex-none">
             {`${title}`}
         </div>
     )

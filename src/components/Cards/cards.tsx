@@ -22,7 +22,7 @@ const Card = (props:IProps)=>{
     wrapperStyle:"bg-gray-50 h-48 sm:h-52 md:h-64 overflow-hidden"
   }
     return (
-        <div className="transition duration-200 transform hover:-translate-y-2 shadow-md rounded-md  hover:shadow-sm ease-in-out flex flex-col bg-tertiary overflow-hidden border border-gray-700 ">
+        <div className="transition duration-200 transform hover:-translate-y-2 shadow-md rounded-md  hover:shadow-sm ease-in-out flex flex-col bg-gray-900 overflow-hidden border border-gray-800 ">
           <a href={props.code} rel="noopener noreferrer nofollow"> <MyImage {...image}  /> </a>
         <div className="py-4 px-3 md:px-6 w-full">
           <div>
@@ -34,12 +34,12 @@ const Card = (props:IProps)=>{
             </h1>
           </div>
           <div className="my-4 max-h-16 h-16 overflow-hidden ">
-            <p className="max-h-28 text-sm overflow-hidden tracking-wide capitalize text-text">{props.description}</p>
+            <p className="max-h-28 text-sm overflow-hidden tracking-wide font-thin text-text">{props.description}</p>
           </div>
-          <div className="my-4">
+          <div className="my-4 flex overflow-auto cardScroll pb-2">
             {props.tags.map((tag:string, idx:Number) => {
               return (
-                <div id={`${idx}`} className="inline-block mr-2">
+                <div id={`${idx}`} className="inline-block mr-2 flex-none">
                   <Hashtag title={tag} />
                 </div>
               );
