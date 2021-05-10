@@ -11,7 +11,7 @@ const Extra :React.FC<propType> = ({data,resumeOnly=true}):React.ReactElement =>
     console.log(data)
     return (
         <div className={`${resumeOnly ? "R-container" : "" } R-section `}>
-            <h2 className="R-header">Collage Acolades</h2>
+            <h2 className="R-header">Collage Accolades</h2>
             <div className="R-section-base">
                 <ul className="list-disc pl-4">
                 {

@@ -35,7 +35,7 @@ const ResumeDisplay = ({data}:any) => {
         <PageHead />
         <Navbar />
         <div className="flex justify-center mt-6">
-        <div className="bg-secondary  rounded-md cursor-pointer py-2 px-2    "><a className="items-center inline-flex" href="https://resumetapan.glitch.me/" target="_blank"><span className="text-xl mr-1"><AiOutlineDownload /></span>Download</a></div>
+        <div className="bg-secondary  rounded-md cursor-pointer py-2 px-2    "><a className="items-center inline-flex" href="https://resumetapan.eu.openode.io/" target="_blank"><span className="text-xl mr-1"><AiOutlineDownload /></span>Download</a></div>
         </div>
         <div className=" flex justify-center"><ResumeContainer  data = {data.resume} resumeOnly = {false}  /></div>
        </div>

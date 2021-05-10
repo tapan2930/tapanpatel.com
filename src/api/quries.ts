@@ -121,6 +121,7 @@ query resumedata{
       __typename
       ... on ContactAndConnect {
         name,
+        value,
         link
       }
     }

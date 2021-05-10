@@ -30,6 +30,7 @@ type ProjectsType = {
 }
 type ConnectsType = {
     name:string,
+    value:string,
     link:string
 }
 type PersonalInfoType = {
