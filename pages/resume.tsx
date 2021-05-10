@@ -1,50 +1,57 @@
 import Navbar from "@components/Navbar/Navbar";
-import Link from "next/link";
-import { Document, Page } from "react-pdf";
-import { pdfjs } from "react-pdf";
+import { GraphQLClient } from "graphql-request";
+import { RESUMEDATA } from "@api/quries";
 import { motion } from "framer-motion";
-import { AiOutlineDownload } from "react-icons/ai";
 import PageHead from "../src/utils/HeadHelper/index";
+import ResumeContainer from "@components/ResumeContainer";
+import {useRouter} from 'next/router'
+import {AiOutlineDownload} from "react-icons/ai"
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
-function ResumeDisplay() {
+
+
+
+const ResumeDisplay = ({data}:any) => {
+  const router = useRouter();
+  const params = router.query;
+  console.log(router)
+
+
+  if(Object.keys(params).length != 0){
+      return(
+        <div className="bg-primary text-text font-body ">
+        <div><ResumeContainer data = {data.resume} resumeOnly = {true}  /></div>
+       </div>
+      )
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <div className="bg-primary text-text font-body pb-16 h-screen overflow-y-auto">
+      <div className="bg-primary text-text font-body pb-16 ">
         <PageHead />
         <Navbar />
-        <Link href={"assets/resume/TapanResume.pdf"}>
-          <a
-            className="text-3xl md:text-lg fixed md:static md:my-6 bottom-5 right-10 z-10 text-center md:flex md:justify-center  "
-            target="_blank"
-          >
-            <div className=" inline-block p-2 rounded-full md:rounded-md shadow-lg md:flex md:items-center bg-secondary">
-              <AiOutlineDownload />{" "}
-              <span className=" md:ml-2 text-sm hidden md:inline">
-                Download
-              </span>
-            </div>
-          </a>
-        </Link>
-        <div className="container mx-auto  px-2 sm:px-10 md:px-10 ">
-          <div>
-            <div className="mt-6 overflow-auto lg:overflow-hidden relative left-0 lg:flex lg:justify-center ">
-              <Document
-                file="https://tapanpatel-com.vercel.app/assets/resume/TapanResume.pdf"
-                renderMode="svg"
-              >
-                <Page pageNumber={1} />
-              </Document>
-            </div>
-          </div>
+        <div className="flex justify-center mt-6">
+        <div className="bg-secondary  rounded-md cursor-pointer py-2 px-2    "><a className="items-center inline-flex" href="https://resumetapan.glitch.me/" target="_blank"><span className="text-xl mr-1"><AiOutlineDownload /></span>Download</a></div>
         </div>
-      </div>
+        <div className=" flex justify-center"><ResumeContainer  data = {data.resume} resumeOnly = {false}  /></div>
+       </div>
     </motion.div>
   );
 }
+
+export async function getStaticProps() {
+  const client = new GraphQLClient(process.env.NEXT_PUBLIC_RESUME_API_ENDPOINT!, { headers: {} });
+  const data = await client.request(RESUMEDATA);
+  return {
+    props: {
+      data,
+    },
+  };
+}
+
+
 export default ResumeDisplay;

@@ -4,3 +4,46 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer utilities {
+    .R-header {
+      @apply text-secondary border-b border-dotted inline-block mb-3 mt-2 text-xl font-bold border-secondary;
+    }
+
+    .R-section-base {
+        @apply font-light text-sm;
+    }
+
+    .R-sub-header {
+        @apply font-semibold text-base;
+    }
+
+    .R-highligth {
+        @apply italic  text-sm font-medium text-secondary;
+    }
+
+    .R-extras {
+        @apply italic font-extralight text-xs
+    }
+
+    .R-section {
+        @apply border-none border-gray-700 pb-5 mb-3
+    }
+
+    .R-text-highlight {
+        @apply bg-opacity-25 bg-pink-300
+    }
+
+    .R-container {
+        width: 370px;
+        min-width: 370px;
+        max-width: 370px;
+    }
+    
+
+    .R-max-hieght{
+        max-height: 984px;
+    }
+
+
+  }

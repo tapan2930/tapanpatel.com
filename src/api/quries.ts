@@ -111,9 +111,61 @@ query allResources{
 }
 `
 
+const RESUMEDATA = gql`
+query resumedata{
+  resume(where: {id: "ckobh6bbkc3i00d619hpm1b6y"}){
+	personalInformation{
+    name
+    desgination
+    connect{
+      __typename
+      ... on ContactAndConnect {
+        name,
+        link
+      }
+    }
+  }
+  skills{
+    	id
+      skill
+      category
+    }
+  projects{
+    id
+    name
+    description
+    web
+    code
+  }
+  jobExperiences{
+    id
+    companyName
+    workExperience
+    from
+    to
+    position
+  }  
+  educations{
+    id
+    instituteName
+    from
+    to
+    degree
+    course
+    location
+    cpi
+  }  
+  extras{
+      id
+      extras
+    }
+  }
+}
+`
 
 
 
-export {ALLPROJECTS, POST, POSTLIST, PINNEDPOST, ALLPOST, ALLRESOURCES}
+
+export {ALLPROJECTS, POST, POSTLIST, PINNEDPOST, ALLPOST, ALLRESOURCES,RESUMEDATA}
 
 

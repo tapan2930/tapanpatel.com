@@ -14,6 +14,12 @@ module.exports = {
       extend: {
         fontFamily:{
           'body': ['"Nunito Sans"']
+        },
+        width:{
+          "resume":"842px"
+        },
+        height:{
+          "resume":"1089px"
         }
       },
     },
