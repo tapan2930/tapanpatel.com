@@ -12,16 +12,16 @@ const personalInfo :React.FC<propType> = ({data}):React.ReactElement => {
     console.log(data)
 
     return (
-        <div className=" border-b border-gray-700 pb-5">
+        <div className=" flex border-b justify-between border-gray-700 pb-5">
             <div className="flex flex-col items-center justify-center">
                 <h1 className="text-4xl">{data.name}</h1>
                 <h2 className="text-secondary">{data.desgination}</h2>
             </div>
-            <div className="flex flex-col justify-center md:flex-row md:justify-around mt-4 flex-wrap">
+            <div className="flex flex-col mt-4 flex-wrap">
                 {
                     data.connect.map(connect=>{
                         return(
-                            <div className="pb-1  flex justify-center">{socialIcons(connect)}</div>
+                            <div className="pb-1  flex justify-start">{socialIcons(connect)}</div>
                         )
                     })
                 }
