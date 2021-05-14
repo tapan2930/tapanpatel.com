@@ -13,13 +13,14 @@ const UserProfile = ()=>{
       style: {"width":"256px"},
       wrapperStyle: ""
     }
+
     return (
-        <div className="flex flex-col h-screen">
-          <div className="flex items-center">
-            <div className="inline-block py-3 pl-3">
-              <img width="60" src="/assets/logo.svg" alt="logo" />
+        <div className="flex flex-col   h-screen box-content">
+          <div className="flex items-center relative h-16">
+            <div className="inline-flex justify-center items-center absolute  top-1 left-3 w-16 h-16">
+              <img width="50" src="/assets/logo.svg" alt="logo" />
             </div>
-            <div className="flex justify-center w-9/12 md:relative -left-10 md:m-auto ">
+            <div className="m-auto flex items-center">
               {userProfile.socialMediaProfile.map((socialMedia, idx) => {
                 return (
                   <div className="inline-block mx-1 text-lg " id={`${idx}`}>
@@ -32,7 +33,7 @@ const UserProfile = ()=>{
               })}
             </div>
           </div>
-          <div className=" flex flex-col items-center justify-self-center ">
+          <div className=" flex flex-col items-center flex-grow  justify-center  ">
             <div className="rounded-full w-64 h-64 overflow-hidden bg-secondary opacity-90 shadow-md border border-secondary inline-block mx-auto mb-10 md:mb-16">
               {/* <img src={userProfile.profile} alt="profile" width="256px" /> */}
               <MyImage {...profile} />

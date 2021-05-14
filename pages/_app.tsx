@@ -17,7 +17,6 @@ import '../styles/styles.css';
 
 const App = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
-
   if(process.env.NODE_ENV === 'production'){
     useEffect(() => {
       const handleRouteChange = (url: URL) => {
@@ -30,7 +29,7 @@ const App = ({ Component, pageProps }: AppProps) => {
     }, [router.events]);
   }
 
-  return <AnimatePresence exitBeforeEnter > <div className="bg-primary"> <Component {...pageProps} key={router.route} /> </div> </AnimatePresence>;
+  return <AnimatePresence exitBeforeEnter > <div className="bg-primary"> <Component {...pageProps} key={ router.route } /> </div> </AnimatePresence>;
 
 }
 
