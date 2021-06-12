@@ -5,7 +5,7 @@ export let navbarData = [
     },
     {
         name:"Blogs",
-        link:"/blogs"
+        link:"https://blog.pateltapan.com/"
     },
     {
         name:"Resources",
