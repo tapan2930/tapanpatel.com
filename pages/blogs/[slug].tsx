@@ -18,7 +18,7 @@ const Post = ({ postData }: any) => {
       <main className="bg-primary text-text font-body pb-16">
         <PageHead
           imgUrl={postData.cover.url}
-          description={postData.title + postData.excerpt + postData.tags}
+          description={postData.excerpt + postData.tags}
           title={postData.title}
           url={router.pathname}
         />
