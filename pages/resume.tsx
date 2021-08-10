@@ -6,15 +6,32 @@ import PageHead from "../src/utils/HeadHelper/index";
 import ResumeContainer from "@components/ResumeContainer";
 import {useRouter} from 'next/router'
 import {AiOutlineDownload} from "react-icons/ai"
+import {CgSpinner} from "react-icons/cg"
+import { useState } from "react";
 
 
 
 
 
 const ResumeDisplay = ({data}:any) => {
+  const [loading, setLoading] = useState(false)
   const router = useRouter();
   const params = router.query;
-  console.log(router)
+  
+  const downloadHandle = async ()=> {
+    setLoading(true)
+    await fetch("/api/resume")
+    .then(res => res.json()
+    .then(
+      res=>{
+        setLoading(false)  
+      window.location.href = res.file
+    },
+    err =>{
+      setLoading(false)
+      console.log(err)
+    }))
+  }
 
 
   if(Object.keys(params).length != 0){
@@ -35,7 +52,18 @@ const ResumeDisplay = ({data}:any) => {
         <PageHead />
         <Navbar />
         <div className="flex justify-center mt-6">
-        <div className="bg-secondary  rounded-md cursor-pointer py-2 px-2    "><a className="items-center inline-flex" href="https://resumetapan.eu.openode.io/" target="_blank"><span className="text-xl mr-1"><AiOutlineDownload /></span>Download</a></div>
+        <div className="bg-secondary  rounded-md cursor-pointer py-2 px-2">
+
+          <button onClick={downloadHandle} className="items-center inline-flex outline-none" >
+            {loading ? <span className="text-xl mr-1 outline-none ">
+              <CgSpinner className="animate-spin " />
+            </span> :<span className="text-xl mr-1 outline-none">
+              <AiOutlineDownload />
+            </span>}
+              Download
+          </button>
+        </div>
+
         </div>
         <div className=" flex justify-center mx-1"><ResumeContainer  data = {data.resume} resumeOnly = {false}  /></div>
        </div>

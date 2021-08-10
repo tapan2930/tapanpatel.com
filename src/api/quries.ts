@@ -138,7 +138,7 @@ query resumedata{
     web
     code
   }
-  jobExperiences{
+  jobExperiences(orderBy: createdAt_DESC){
     id
     companyName
     workExperience

@@ -4,9 +4,6 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const MyImage = ({ alt,src,placeholderSrc,wrapperStyle,style }:any) => (
     <>
-    {
-      console.log(src)
-    }
       <LazyLoadImage
         alt={alt}
         src={src} 

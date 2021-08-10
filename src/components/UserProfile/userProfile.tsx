@@ -16,9 +16,9 @@ const UserProfile = ()=>{
 
     return (
         <div className="flex flex-col   h-screen box-content">
-          <div className="flex items-center relative h-16">
-            <div className="inline-flex justify-center items-center absolute  top-1 left-3 w-16 h-16">
-              <img width="50" src="/assets/logo.svg" alt="logo" />
+          <div className="flex items-center relative h-16 pt-2">
+            <div className="inline-flex justify-center items-center md:absolute  top-1 left-3 ml-2 pt-2 ">
+              <img width="50px" src="/assets/logo.svg" alt="logo" />
             </div>
             <div className="m-auto flex items-center">
               {userProfile.socialMediaProfile.map((socialMedia, idx) => {
