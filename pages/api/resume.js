@@ -20,7 +20,7 @@ export default async function handler(req, res) {
                     "display_header_footer": false,
                     "wait_until": "load",
                     "wait_time": 0,
-                    "engine_version": "90",
+                    "engine_version": "104",
                     "filename": "Tapan-Resume.pdf"
                 },
                 "export-1": {
