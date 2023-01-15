@@ -11,6 +11,7 @@
     "build": "next build",
     "start": "next start"
   },
+  "engines": { "node": "16.x" },
   "dependencies": {
     "babel-plugin-prismjs": "^2.0.1",
     "cloudconvert": "^2.2.4",
