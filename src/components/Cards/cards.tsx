@@ -19,7 +19,7 @@ const Card = (props:IProps)=>{
     src: props.cover.url,
     placeholderSrc:props.cover.placeholder,
     style:{"width":"100%", "height":"100%", "objectFit":"cover", "objectPosition": "center"},
-    wrapperStyle:"bg-gray-50 sm:h-52 md:h-64 overflow-hidden"
+    wrapperStyle:"bg-gray-50 sm:h-52 md:h-64 overflow-hidden w-full"
   }
     return (
         <div className="transition duration-200 transform hover:-translate-y-2 shadow-md rounded-md  hover:shadow-sm ease-in-out flex flex-col bg-gray-900 overflow-hidden border border-gray-800 ">

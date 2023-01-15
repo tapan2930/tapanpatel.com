@@ -7,7 +7,6 @@ type propType = {
 }
 
 const Experience :React.FC<propType> = ({data,resumeOnly=false}):React.ReactElement => {
-    console.log("Experience", data)
     return (
         <div className={`${resumeOnly ? "R-container" : "" } R-section `}>
              <h2 className="R-header">Experience:</h2>
