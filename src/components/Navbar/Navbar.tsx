@@ -18,9 +18,7 @@ const Navbar = ()=> {
                 <div className="flex items-center justify-between lg:justify-start">
                 <div className="inline-block py-3 px-3">
               <Link href={`/`} >
-                <a>
                 <img width="50" src="/assets/logo.svg" alt="logo" />
-                </a>
                 </Link>
             </div>
             <div className="hidden lg:block">

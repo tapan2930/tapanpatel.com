@@ -6,6 +6,7 @@ import resourceSorter  from '@utils/resourceSorter'
 import Base from "../src/Base/index"
 import PageHead from "../src/utils/HeadHelper/index"
 import { BiCreditCardFront } from "react-icons/bi"
+import getPlaceholder from "@utils/getPlaceholder"
 
 
 
@@ -14,7 +15,7 @@ const ResourcesPage = ({resources}:any)=>{
   const resourceCategory = [...resourceCatMap(resources)]
     return (
           <div className="bg-primary text-text font-body pb-16">
-          <PageHead url="https://pateltapan.com/resources" title={"Resources | Tapan Patel"}/>
+          <PageHead url="https://tapan.tech/resources" title={"Resources | Tapan Patel"}/>
           <Base>
           <div className="container mx-auto px-3 sm:px-10 md:px-10 lg:px-20 xl:px-40 py-6">
           {
@@ -51,7 +52,17 @@ const ResourcesPage = ({resources}:any)=>{
 
 export async function getStaticProps() {
   const postGraphCMS = new GraphQLClient(process.env.NEXT_PUBLIC_API_ENDPOINT! , { headers: {} })
-  const {resources} =  await postGraphCMS.request(ALLRESOURCES)
+  const {resources} =  await postGraphCMS.request<any>(ALLRESOURCES).then( async data => {
+    if(data?.resources){
+      const updatedResources = await Promise.all(
+        data?.resources?.map(async (resource: any) => {
+          return { ...resource, cover: { ...resource.cover, placeholder: await getPlaceholder(resource.cover.url) } };
+        })
+      );
+      data.resources = updatedResources
+    }
+    return data;
+  })
   return {
     props: {
       resources,

@@ -36,11 +36,9 @@ const Post = ({ postData }: any) => {
               </div>
               <div className="flex text-gray-300  text-xs items-center justify-center mb-2">
                 <Link href="/">
-                  <a>
                     <h2 className="ml-2 border-b border-dotted text-secondary border-secondary ">
                       {postData.author.name}
                     </h2>
-                  </a>
                 </Link>
                 <BsDot />
                 <p className="text-gray-300">{postData.date}</p>
@@ -77,7 +75,7 @@ export async function getStaticProps({ params }: any) {
   const postListGraphCMS = new GraphQLClient(process.env.NEXT_PUBLIC_API_ENDPOINT!, {
     headers: {},
   });
-  const { post } = await postListGraphCMS.request(POST, variable);
+  const { post } = await postListGraphCMS.request<any>(POST, variable);
   return {
     props: {
       postData: post,
@@ -89,7 +87,7 @@ export async function getStaticPaths() {
   const postGraphCMS = new GraphQLClient(process.env.NEXT_PUBLIC_API_ENDPOINT!, {
     headers: {},
   });
-  const { posts: postList } = await postGraphCMS.request(POSTLIST);
+  const { posts: postList } = await postGraphCMS.request<any>(POSTLIST);
 
   return {
     paths: postList.map((pl: postList) => {

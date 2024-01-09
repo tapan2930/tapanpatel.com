@@ -4,11 +4,12 @@ import { GraphQLClient } from "graphql-request";
 import { ALLPROJECTS } from "@api/quries";
 import PageHead from "../src/utils/HeadHelper/index";
 import Base from "../src/Base/index"
+import getPlaceholder from "@utils/getPlaceholder"
 
 const projectPage: NextPage = ({ data }: any) => {
   return (
       <main className="bg-primary  text-text font-body pb-16 h-full">
-        <PageHead url="https://pateltapan/projects" />
+        <PageHead url="https://tapan.tech/projects" />
         <Base>
         <div className="container mx-auto px-3 sm:px-10 md:px-10 lg:px-20 xl:px-40">
           <div className="pt-6  md:pt-8 ">
@@ -33,7 +34,17 @@ const projectPage: NextPage = ({ data }: any) => {
 
 export async function getStaticProps() {
   const client = new GraphQLClient(process.env.NEXT_PUBLIC_API_ENDPOINT!, { headers: {} });
-  const data = await client.request(ALLPROJECTS);
+  const data = await client.request<any>(ALLPROJECTS).then( async data => {
+    if(data?.projects){
+      const updatedProjects = await Promise.all(
+        data?.projects?.map(async (project: any) => {
+          return { ...project, cover: { ...project.cover, placeholder: await getPlaceholder(project.cover.url) } };
+        })
+      );
+      data.project = updatedProjects
+    }
+    return data;
+  });
   return {
     props: {
       data,

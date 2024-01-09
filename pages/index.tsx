@@ -6,9 +6,9 @@ import PageHead from "../src/utils/HeadHelper/index";
 const IndexPage: NextPage = () => {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
     >
       <main className="bg-primary text-white font-body">
         <PageHead />

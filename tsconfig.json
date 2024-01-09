@@ -6,7 +6,10 @@
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "lib": ["dom", "es2017"],
+    "lib": [
+      "dom",
+      "es2017"
+    ],
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,
@@ -20,14 +23,32 @@
     "baseUrl": "./",
     "paths": {
       // name_of_alias: [real_url_of_directory]
-      "@components/*": ["./src/components/*"],
-      "@modules/*": ["./src/modules/*"],
-      "@hooks/*": ["./src/hooks/*"],
-      "@types/*": ["./src/types/*"],
-      "@utils/*": ["./src/utils/*"],
-      "@api/*": ["src/api/*"]
-    }
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@modules/*": [
+        "./src/modules/*"
+      ],
+      "@hooks/*": [
+        "./src/hooks/*"
+      ],
+      "@types/*": [
+        "./src/types/*"
+      ],
+      "@utils/*": [
+        "./src/utils/*"
+      ],
+      "@api/*": [
+        "src/api/*"
+      ]
+    },
+    "incremental": true
   },
-  "exclude": ["node_modules"],
-  "include": ["**/*.ts", "**/*.tsx"]
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ]
 }

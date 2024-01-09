@@ -10,8 +10,8 @@ type propType = {
 const PageHead = ({
   title = "Tapan Patel | Fullstack Developer, Wants to create an amazing User Experience",
   description = "I am a Fullstack developers, Building great user interface, scaleable and amazing apps.",
-  url = "https://pateltapan.com/",
-  imgUrl = "https://pateltapan.com/og.png",
+  url = "https://tapan.tech/",
+  imgUrl = "https://tapan.tech/og.png",
 }: propType) => {
   return (
     <Head>

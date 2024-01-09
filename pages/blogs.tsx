@@ -5,6 +5,7 @@ import { GraphQLClient  } from 'graphql-request'
 import {PINNEDPOST, ALLPOST} from '@api/quries'
 import generateSitemap from "../src/utils/sitemap"
 import Base from "../src/Base/index"
+import getPlaceholder from "@utils/getPlaceholder"
 
 
 interface postdata{
@@ -26,7 +27,7 @@ const Post = ({pinnedPost, allPost}:any)=>{
       // <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} >
            <main className="bg-primary text-text font-body pb-16">
           <Head>
-          <meta property="og:url" content="https://pateltapan.com/blogs" />
+          <meta property="og:url" content="https://tapan.tech/blogs" />
       <meta property="og:type" content="web" />
       <meta property="og:title" content="Tapan Patel Portfolio" />
       <meta property="og:image" content="/og.png" />
@@ -47,11 +48,9 @@ const Post = ({pinnedPost, allPost}:any)=>{
                    pinnedPost.map((post:postdata, idx:Number)=>{
                        return (
                         <Link href={`/blogs/${post.slug}`} >
-                        <a href={`/blogs/${post.slug}`} >
                            <div id={`${idx}`}>
                                <Card description={post.excerpt} title={post.title} cover={post.cover} tags={post.tags} app={""} code={""}   />
                            </div>
-                           </a>
                  </Link>
                        )
                    })
@@ -66,11 +65,9 @@ const Post = ({pinnedPost, allPost}:any)=>{
                    allPost.map((post:postdata, idx:Number)=>{
                        return (
                         <Link href={`/blogs/${post.slug}`} >
-                        <a href={`/blogs/${post.slug}`} >
                            <div id={`${idx}`}>
                               <Card description={post.excerpt} title={post.title} cover={post.cover} tags={post.tags} app={""} code={""}  />
                            </div>
-                        </a>
                  </Link>
                        )
                    })
@@ -89,9 +86,38 @@ const Post = ({pinnedPost, allPost}:any)=>{
 
 export async function getStaticProps() {
     const postGraphCMS = new GraphQLClient(process.env.NEXT_PUBLIC_API_ENDPOINT! , { headers: {} })
-    const {posts:pinnedPost} =  await postGraphCMS.request(PINNEDPOST) 
-    const {posts:allPost} =  await postGraphCMS.request(ALLPOST) 
-    await generateSitemap(allPost)
+    const {posts:pinnedPost} =  await postGraphCMS.request<any>(PINNEDPOST).then( async postsJson => {
+      if(postsJson?.posts){
+        const updatedPosts = await Promise.all(
+          postsJson?.posts?.map(async (post: any) => {
+            return { ...post, cover: { ...post.cover, placeholder: await getPlaceholder(post.cover.url) } };
+          })
+        );
+        postsJson.posts = updatedPosts
+      }
+      return postsJson;
+    })
+
+    const {posts:allPost} =  await postGraphCMS.request<any>(ALLPOST).then( async postsJson => {
+      if(postsJson?.posts){
+        const updatedPosts = await Promise.all(
+          postsJson?.posts?.map(async (post: any) => {
+            return { ...post, cover: { ...post.cover, placeholder: await getPlaceholder(post.cover.url) } };
+          })
+        );
+        postsJson.posts = updatedPosts
+      }
+      return postsJson;
+    })
+    await generateSitemap(allPost).then((res) => {
+      if(res){
+        console.log("Sitemap generated successfully...")
+      }else{
+        console.log("Problem generating Sitemap...")
+      }
+    })
+
+  
     return {
       props: {
         pinnedPost,

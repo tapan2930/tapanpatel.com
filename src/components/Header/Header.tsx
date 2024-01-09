@@ -18,7 +18,7 @@ let Header = (): JSX.Element => {
           <div className=""> <BigButton text={"Projects"} link={"/projects"}/></div>
           <div className=""> <BigButton text={"Blogs"} link={"/blogs"}/></div>
           <div className=""><BigButton text={"Resources"} link={"/resources"}/></div>
-          <div className=""> <BigButton text={"Resume"} link={"/resume"}/></div>
+          <div className=""> <BigButton text={"About Me"} link={"/resume"}/></div>
           </div>
         </div>
       </div>

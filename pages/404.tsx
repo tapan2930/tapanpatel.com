@@ -13,10 +13,8 @@ const error404 = () =>{
                     <span className="text-secondary ml-2 font-semibold">Page Not Found</span>
                 </div>
                 <div className="mt-6">
-                    <Link href="/">
-                        <a className="text-sm font-light border-b border-secondary border-dotted pb-2 ">
-                        <span> &#8592; Back To home </span> 
-                        </a>
+                    <Link href="/" className="text-sm font-light border-b border-secondary border-dotted pb-2 ">
+                        <span > &#8592; Back To home </span> 
                     </Link>
                 </div>
                     

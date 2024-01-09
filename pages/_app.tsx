@@ -29,7 +29,7 @@ const App = ({ Component, pageProps }: AppProps) => {
     }, [router.events]);
   }
 
-  return <AnimatePresence exitBeforeEnter > <div className="bg-primary"> <Component {...pageProps} key={ router.route } /> </div> </AnimatePresence>;
+  return <AnimatePresence mode = "wait" > <div className="bg-primary"> <Component {...pageProps} key={ router.route } /> </div> </AnimatePresence>;
 
 }
 

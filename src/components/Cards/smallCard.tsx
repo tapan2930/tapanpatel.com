@@ -34,7 +34,7 @@ const SmallCard: React.FC<IProps> = (props: IProps): React.ReactElement => {
           </h1>
         </div>
         <div className="my-2 overflow-hidden max-h-16">
-          <p className="max-h-28 text-sm overflow-hidden tracking-wide capitalize text-text">
+          <p className="max-h-28 text-sm overflow-hidden tracking-wide capitalize text-text line-clamp-2" title={description}>
             {description}
           </p>
         </div>
