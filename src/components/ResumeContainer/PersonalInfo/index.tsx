@@ -34,8 +34,8 @@ const socialIcons = (connect:any) =>{
     switch(connect.name.toLowerCase()){ 
         case "phone": return   <div className="flex items-center"><span className="mr-3"><AiFillPhone /></span>{ connect.value }</div>
         case "github": return  <div><a className="flex items-center" href={connect.link} target="_blank"><span className="mr-3"><AiFillGithub /></span>{ connect.name }</a></div>
-        case "linkdin/in/tapan2930": return <div><a className="flex items-center" href={connect.link} target="_blank"><span className="mr-3"><AiFillLinkedin /></span>{ connect.name }</a></div>
-        case "email": return   <div><a className="flex items-center" href={connect.link} target="_blank"><span className="mr-3"><AiTwotoneMail /></span>{ connect.link }</a></div>
+        case "linkdin/tapan2930": return <div><a className="flex items-center" href={connect.link} target="_blank"><span className="mr-3"><AiFillLinkedin /></span>{ connect.name }</a></div>
+        case "email": return   <div><a className="flex items-center" href={connect.link} target="_blank"><span className="mr-3"><AiTwotoneMail /></span>{ connect.value }</a></div>
         case "website": return <div><a className="flex items-center" href={connect.link} target="_blank"><span className="mr-3"><RiProfileFill /></span>{ connect.link }</a></div>
         default: return null
     }

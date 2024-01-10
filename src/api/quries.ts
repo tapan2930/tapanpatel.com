@@ -142,9 +142,10 @@ query resumedata{
     id
     companyName
     workExperience
-    from
-    to
+    location
     position
+    fromDate
+    toDate
   }  
   educations{
     id

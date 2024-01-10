@@ -16,10 +16,11 @@ type skillsType = {
 type ExperienceType = {
     id?:string
     companyName:string,
-    from:string,
-    to:string,
+    location:string,
     workExperience:Array<string>,
     position:string
+    fromDate: Date
+    toDate: Date
 }
 type ProjectsType = {
     id?:string
