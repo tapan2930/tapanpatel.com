@@ -30,7 +30,7 @@
     "react-markdown": "^9.0.1",
     "react-pdf": "^7.6.0",
     "sass": "^1.69.7",
-    "sharp": "^0.33.1"
+    "sharp": "0.32"
   },
   "devDependencies": {
     "@types/classnames": "^2.3.0",
