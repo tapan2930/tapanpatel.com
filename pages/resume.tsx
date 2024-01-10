@@ -29,20 +29,9 @@ const ResumeDisplay = ({data}:any) => {
         <PageHead />
         <Navbar />
         <div className="flex justify-center mt-6">
-        {/* <div className="bg-secondary  rounded-md cursor-pointer py-2 px-2"> */}
-
-          {/* <button onClick={downloadHandle} className="items-center inline-flex outline-none" >
-            {loading ? <span className="text-xl mr-1 outline-none ">
-              <CgSpinner className="animate-spin " />
-            </span> :<span className="text-xl mr-1 outline-none">
-              <AiOutlineDownload />
-            </span>}
-              Download
-          </button> */}
-        {/* </div> */}
-
         </div>
-        <div className=" flex justify-center mx-1"><ResumeContainer  data = {data.resume} resumeOnly = {false}  /></div>
+        <div className=" flex justify-center mx-1">
+          <ResumeContainer  data = {data.resume} resumeOnly = {false}  /></div>
        </div>
     </motion.div>
   );

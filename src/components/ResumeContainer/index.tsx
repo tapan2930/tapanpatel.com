@@ -34,7 +34,7 @@ const ResumeContainer :React.FC<propsType> = ({data,resumeOnly}):React.ReactElem
 
     return (
         
-        <div className={`w-resume  border rounded-xl border-gray-700 p-2 md:p-5 lg:p-10 my-6 lg:my-12`}>
+        <div className={`w-resume  p-2 md:p-5 lg:p-10 my-6 lg:my-12`}>
             <PersonalInfo data={personalInformation} />
             <div className="flex flex-col  justify-between">
                    <Skills data={skills} resumeOnly={false} /> 
