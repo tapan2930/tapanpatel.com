@@ -12,7 +12,7 @@ const userProfile  = {
         },
         {
             service: "linkdin",
-            link: "https://www.linkedin.com/in/tapan-patel-7567511a5/"
+            link: "https://www.linkedin.com/in/tapanmp"
         },
         {
             service: "unsplash",
