@@ -1,6 +1,6 @@
 const userProfile  = {
     name: "Tapan Patel",
-    designation: "Fullstack Developer",
+    designation: "Software Engineer",
     setLinePrimary: "I [design] and [build] apps,",
     setLineSecondary: "and everything that comes with it.",
     profile: "/assets/profile.png",
